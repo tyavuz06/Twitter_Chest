@@ -1,0 +1,411 @@
+<!--
+ * Common KoolUI Templates
+ *
+ * LICENSE: This source file is subject to KoolPHP license
+ *
+ * @category   Template, KoolUI
+ * @author     KoolPHP Inc. <support@KoolPHP.net>
+ * @copyright  2008-2014 KoolPHP Inc.
+ * @license    KoolPHP license
+ * @version    1.0.0.0
+ * @link       http://koolphp.net
+ -->
+<kTemplates
+    class='KoolUITemplate' 
+    style='display: none'
+>
+ 
+<KControl 
+     kParams='{"param0": "text"}' 
+     kControls='{"control0": "KControl"}'
+>
+    <t0>
+        <div>
+            {{param0}}
+        </div>
+    </t0>
+</kControl>
+
+<KIcon 
+    kParams='{"param0": "icon"}' 
+    kControls='{"control0": "KIcon"}'
+>
+    <KIconFA
+        kControls='{"control0": "KIconfa"}'
+    >
+        <div>
+            <span class='fa {{param0}}'>
+            </span>
+        </div>
+    </KIconFA>
+    
+    <t1>
+        <div>
+            <img src='{{param0}}'>
+        </div>
+    </t1>
+    
+    <KCheckbox 
+         kControls='{"control0": "KCheckbox"}'
+     >
+         <div></div>
+     </kCheckbox> 
+
+    <KRadio 
+        kControls='{"control0": "KRadio"}'
+    >
+        <div></div>
+    </kRadio>
+
+</kIcon>
+
+<KText 
+    kParams='{"param0": "text"}' 
+    kControls='{"control0": "KText"}'
+>
+    <t0>
+        <div class='{{param1}}'>
+            {{param0}}
+        </div>
+    </t0>
+    
+</kText>
+
+<KImg 
+    class='KoolUITemplate' 
+    kParams='{"param0": "img"}' 
+    kControls='{"control0": "KImg"}'
+>
+    <t0>
+        <div>
+            <img src='{{param0}}'>
+        </div>
+    </t0>
+    
+</kImg>
+
+<KButton 
+    kControls='{"control0": "KButton"}'
+>
+    <t0>
+        <div>
+           <KTemplate selector='KIcon KIconfa'></KTemplate>
+           <KTemplate selector='KText t0'></KTemplate>
+        </div>
+    </t0>
+    
+    <t1>
+        <div>
+           <KTemplate selector='KText t0'></KTemplate>
+           <KTemplate selector='KIcon KIconfa'></KTemplate>
+        </div>
+    </t1>
+    
+    <t0>
+        <div>
+           <KTemplate selector='KIcon KIconfa'></KTemplate>
+           <KTemplate selector='KText t0'></KTemplate>
+           <KTemplate selector='KIcon KIconfa'></KTemplate>
+        </div>
+    </t0>   
+    
+</kButton>
+
+<KItem 
+    kControls='{"control0": "KItem"}' 
+    kListeners='{
+        "KItem": {
+            "mouseover": "getListenerMouseOver",
+            "mouseout": "getListenerMouseOut", 
+            "mousedown": "getListenerMouseDown", 
+            "click": "getListenerClick"
+        },
+        "KListbox": {
+            "click": "getListenerItemClick"
+        }
+    }'
+>
+    <t0 
+        kListeners='{
+            "KItem": {
+                "mouseover": "",
+                "mouseout": "", 
+                "mousedown": "", 
+                "click": ""
+            },
+            "KListbox": {
+                "click": ""
+            }
+        }'
+    >
+        <div>
+            <table style="width:100%">
+                <tr>
+                    <td style="width:20px">
+                        <!--<input type="radio" name="radio1">-->
+                        <KTemplate selector='KIcon KRadio'>
+                        </KTemplate>
+                    </td>
+                    <td kListeners='{
+                            "KItem": {
+                                "mouseover": "getListenerMouseOver",
+                                "mouseout": "getListenerMouseOut", 
+                                "mousedown": "getListenerMouseDown", 
+                                "click": ["getListenerClick"]
+                            },
+                            "KListbox": {
+                                "click": ["getListenerItemClick"]
+                            }
+                        }'
+                    >
+                       <KTemplate 
+                            selector='KText t0' 
+                            kParams='{"param1": "classTitle"}'>
+                        </KTemplate>
+                       <KTemplate 
+                            selector='KText t0' 
+                            kParams='{"param0": "text2"}'>
+                        </KTemplate>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </t0>
+    
+    <t1>
+        <div>
+           <KTemplate selector='KImg t0'></KTemplate>
+           <KTemplate selector='KText t0'></KTemplate>
+        </div>
+    </t1>
+    
+    <t2>
+        <div>
+           <KTemplate selector='KText t0'></KTemplate>
+           <KTemplate selector='KImg t0'></KTemplate>
+        </div>
+    </t2>    
+    
+    <t3>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                       <KTemplate selector='KImg t0'>
+                        </KTemplate>
+                    </td>
+                    <td>
+                       <KTemplate selector='KText t0'>
+                        </KTemplate>
+                       <KTemplate 
+                            selector='KText t0' 
+                            kParams='{"param0": "text2"}'>
+                        </KTemplate>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </t3>    
+    
+    <t4>
+        <div>
+            <table>
+                <tr>
+                    <td class='kui-td-img'>
+                       <KTemplate selector='KImg t0'>
+                        </KTemplate>
+                    </td>
+                    <td class='kui-td-text'>
+                       <KTemplate selector='KText t0'>
+                        </KTemplate>
+                    </td>
+                    <td>
+                       <KTemplate 
+                            selector='KText t0' 
+                            kParams='{"param0": "text2"}'>
+                        </KTemplate>
+                    </td>                
+                </tr>
+            </table>
+        </div>
+    </t4>  
+    
+    <t5>
+        <div>
+           <KTemplate selector='KText t0'></KTemplate>
+        </div>
+    </t5>
+    
+    <t6>
+        <div class='kui-{{float}}'>
+           <KTemplate 
+               selector='KIcon KIconFA'
+               kParams='{"param0": "icon1"}'>
+           </KTemplate>
+<!--           <KTemplate 
+               selector='KIcon KIconFA'
+               kParams='{"param0": "icon2"}'>
+           </KTemplate>-->
+<!--            <KTemplate 
+               selector='KIcon KIconFA'
+               kParams='{"param0": "icon3"}'>
+           </KTemplate>-->
+        </div>
+    </t6>
+    
+</kItem>
+
+<KToolbar 
+    kControls='{"control0": "KToolbar"}'
+>
+    <t0>
+        <div>
+           <KTemplate 
+                selector='KButton t0' 
+                kCommands='{"repeat": "buttons"}' >
+            </KTemplate>
+            <div class='kui-clear'></div>
+        </div>
+    </t0>
+    
+    <t1>
+        <div>
+           <KTemplate 
+                selector='KButton t1' 
+                kCommands='{"repeat": "buttons"}' >
+            </KTemplate>
+            <div class='kui-clear'></div>
+        </div>
+    </t1>
+    
+</kToolbar>
+
+<KListbox 
+    kControls='{"control0": "KListbox"}'
+    kParams='{"param0": "title"}' 
+>
+    <t0>
+        <div kParams='{"param1": "subTitle"}'>
+            <div>
+                {{param0}}
+            </div>
+            <div>
+                {{param1}}
+            </div>
+            <div style='margin-top:5px'>
+                <div kCommands='{"repeat": "items"}'>
+                   <KTemplate selector='KItem t0'>
+                    </KTemplate>
+                </div>
+            </div>
+        </div>
+    </t0>
+    
+    <t1>
+        <div>
+            <div>
+                {{param0}}
+            </div>
+           <KTemplate 
+                selector='KItem t1' 
+                kCommands='{"repeat": "items"}' >
+            </KTemplate>
+        </div>
+    </t1>
+    
+    <t2>
+        <div>
+            <div>
+                {{param0}}
+            </div>
+           <KTemplate 
+                selector='KItem t2' 
+                kCommands='{"repeat": "items"}' >
+            </KTemplate>
+        </div>
+    </t2>
+    
+    <t3>
+        <div>
+            <div>
+                {{param0}}
+            </div>
+           <KTemplate 
+                selector='KItem t3' 
+                kCommands='{"repeat": "items"}' >
+            </KTemplate>
+        </div>
+    </t3>  
+    
+    <t4>
+        <div>
+            <div>
+                {{param0}}
+            </div>
+           <KTemplate 
+                selector='KItem t4' 
+                kCommands='{"repeat": "items"}' >
+            </KTemplate>
+        </div>
+    </t4>   
+    
+    <t5>
+        <div>
+            <div>
+                {{param0}}
+            </div>
+           <KTemplate 
+                selector='KItem t5' 
+                kCommands='{"repeat": "items"}' >
+            </KTemplate>
+        </div>
+    </t5>    
+    
+</kListbox>
+        
+<KBarcode 
+    kControls='{"control0": "KBarcode"}'
+>
+    
+    <t0>
+        <div>
+            <canvas>
+            </canvas>
+        </div>
+    </t0>
+    
+</KBarcode>
+    
+<KPanel
+    kControls='{"control0": "KPanel"}'
+>
+    
+    <t0>
+        <div>
+            <div class='kpanel-bar'>
+                <KTemplate 
+                    selector='KItem t6'
+                    kData='{
+                        "icon1": "double-up"
+                    }'>
+                </KTemplate>
+                
+                <KTemplate 
+                    selector='KText t0'
+                    kParams='{"param0": "title"}'>
+                </KTemplate>
+            </div>
+            <div class='kpanel-content'>
+                <KTemplate 
+                    selector='KText t0'
+                    kParams='{"param0": "content"}'>
+                </KTemplate>
+            </div>
+            <!--<div class='kui-clear'></div>-->
+        </div>
+    </t0>
+    
+</KPanel>
+
+</ktemplates>
+

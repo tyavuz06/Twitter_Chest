@@ -1,0 +1,7 @@
+id; parentId; prop; value; desc; type; meta
+1; ; KoolChart1; ; ; Object;
+1_2; 1; Width; 660; Chart's width; Number; {"rowEdit":{"value":true}}
+1_3; 1; Height; 460; Chart's height; Number; {"rowEdit":{"value":true}}
+1_12; 1; Pad; [20, 20, 20, 20];  Set's each value for chart's top, bottom, left and right padding; Array; {"rowEdit":{"value":true}}
+1_22; 1; BarGapRatio; 0.5;  Set's gap over bar width ratio; Number; {"rowEdit":{"value":true}}
+1_23; 1; CategoryGapRatio; ;  Set's gap over category width ratio; Number; {"rowEdit":{"value":true}}

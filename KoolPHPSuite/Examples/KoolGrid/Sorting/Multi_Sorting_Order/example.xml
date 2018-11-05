@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Multi_Sorting_Order" usedb="true">
+	<title>Basic Sorting</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>KoolGrid supports 4 modes of multi sorting order</metadescription>
+	<description>
+		<![CDATA[ 
+KoolGrid supports  4 modes of multi sorting order: "left-right" (default), "right-left", "FCFS" (first click first served) and "LCFS" (last click first served). To use this feature please set the MultiSortingOrder property of a table view instance:
+<b>$grid->MasterTable->MultiSortingOrder = 'left-right'; // 'right-left' | 'FCFS' | 'LCFS'</b>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	$KoolControlsFolder = "../../../../KoolControls";//Relative path to "KoolPHPSuite/KoolControls" folder
+	
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+
+	require $KoolControlsFolder."/KoolGrid/koolgrid.php";
+	require $KoolControlsFolder."/KoolGrid/ext/datasources/MySQLiDataSource.php";
+	$ds = new MySQLiDataSource($db_con);//This $db_con link has been created inside KoolPHPSuite/Resources/runexample.php
+	$ds->SelectCommand = "select customerNumber,customerName,phone,city from customers";
+
+	$grid = new KoolGrid("grid");
+	$grid->scriptFolder = $KoolControlsFolder."/KoolGrid";
+	$grid->styleFolder="sunset";
+	$grid->DataSource = $ds;
+	$grid->Width = "655px";
+
+	$grid->RowAlternative = true;
+
+	$grid->AjaxEnabled = true;
+	$grid->AutoGenerateColumns = true;
+	
+	$grid->AllowSorting = true;//Enable sorting for all rows;
+		
+	$grid->MasterTable->Pager = new GridPrevNextAndNumericPager();
+
+    if (isset($_POST["sortOrder"]))
+    {
+        $_SESSION["sortOrder"] = $_POST["sortOrder"];
+    } else
+    {
+        if (!$koolajax->isCallback)
+        {
+            //Page Init: show default sort order
+            $_SESSION["sortOrder"] = "left-right";
+        }
+    }
+	$grid->MasterTable->MultiSortingOrder = $_SESSION["sortOrder"]; // 'left-right' | 'right-left' | 'fcfs' | 'lcfs'
+	
+	$grid->Process();
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+  
+	Select multi sorting order:
+    <select id="sortOrder" name="sortOrder" onchange="grid.refresh();submit();">
+        <option value="left-right"		<?php if ($_SESSION["sortOrder"] == "left-right") echo "selected" ?> >left-right</option>
+        <option value="right-left"		<?php if ($_SESSION["sortOrder"] == "right-left") echo "selected" ?> >right-left</option>		
+        <option value="FCFS"		<?php if ($_SESSION["sortOrder"] == "FCFS") echo "selected" ?> >First come first served</option>		
+        <option value="LCFS"		<?php if ($_SESSION["sortOrder"] == "LCFS") echo "selected" ?> >Last come first served</option>			
+    </select>
+	
+	<div style="padding-bottom:5px;">
+		Click column header to sort:
+	</div>
+	<?php echo $grid->Render();?>
+	<div style="margin-top:10px;"><i>* <u>Note</u>:</i>Generate your own grid with <a style="color:#B8305E;" target="_blank" href="http://codegen.koolphp.net/grid/">Code Generator</a></div>
+	
+</form>
+
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/KoolGrid/index.php">KoolGrid</doc>
+	</docs>
+</example>

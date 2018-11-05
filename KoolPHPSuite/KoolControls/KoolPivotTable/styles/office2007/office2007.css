@@ -1,0 +1,706 @@
+.office2007KPT,
+.office2007KPT_UpdatePanel
+{
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+	overflow:hidden;
+}
+.office2007KPT
+{
+    background: none repeat scroll 0 0 white;
+	border: 1px solid #688CAF;
+    color: #00156E;
+    font-family: "Segoe UI",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+}
+.office2007KPT .kptTable
+{
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;		
+}
+.office2007KPT td
+{
+
+    background-color: #C3D8F1;
+	border-color:#688CAF;
+	border-left: 0 none;
+	
+    padding: 3px 8px 3px 7px;
+    text-align: left;
+    vertical-align: top;
+    border-style: solid;
+    border-width: 0 0 1px 1px;
+	overflow:hidden;		
+}
+
+.office2007KPT .kptFilterZone
+{
+	border-left: 0 none;
+	background-image: url("sprite.png");
+    background-color: #C3D8F1;
+    background-position: 0 -2000px;
+    background-repeat: repeat-x;
+		
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+.office2007KPT .kptDataZone
+{
+	background-image: url("sprite.png");
+    background-color: #C3D8F1;
+    background-position: 0 -2000px;
+    background-repeat: repeat-x;	
+	white-space: nowrap;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+	border-left:0px;
+}
+.office2007KPT .kptColumnZone
+{
+	background-image: url("sprite.png");
+    background-color: #C3D8F1;
+    background-position: 0 -2000px;
+    background-repeat: repeat-x;	
+	white-space: nowrap;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;	
+}
+.office2007KPT .kptRowZone
+{
+	background-image: url("sprite.png");
+    background-color: #C3D8F1;
+    background-position: 0 -2000px;
+    background-repeat: repeat-x;	
+
+	border-left:0px;
+}
+.office2007KPT .kptColumnHeaderZone
+{
+
+	padding: 0;
+	border-bottom: 0 none;	
+}
+.office2007KPT .kptRowHeaderZone
+{
+	border-left:0px;
+	padding: 0;
+	border-bottom: 0 none;	
+	background-color:white;	
+}
+.office2007KPT .kptContentZone
+{
+	padding: 0;
+	border-bottom: 0 none;
+	background-color:white;	
+}
+
+.office2007KPT .kptVerticalScrollingZone
+{
+	padding: 0;
+}
+.office2007KPT .kptHorizontalScrollingZone
+{
+	border-left:0px;
+	padding: 0;
+}
+.office2007KPT .kptPagerZone
+{
+	background-image: url("sprite.png");
+    background-color: #ECF3FC;
+    background-position: 0 -1700px;
+    background-repeat: repeat-x;
+    color: #00156E;	
+	border-left:0px;
+	padding: 5px 0 4px;
+}
+
+.office2007KPT .kptStatusZone
+{
+	background-image: url("sprite.png");
+    background-color: #C3D8F1;
+    background-position: 0 -2000px;
+	background-repeat: repeat-x;			
+	border-left:0px;
+	line-height:20px;
+}
+
+.office2007KPT .kptColumnHeaderZone .kptTable,
+.office2007KPT .kptRowHeaderZone .kptTable,
+.office2007KPT .kptContentZone .kptTable 
+{
+    margin-left: -1px;
+}
+
+
+.office2007KPT .kptRowZone td
+{
+	background-color:transparent;
+	border:0px;
+	padding:0px;
+}
+
+.office2007KPT .kptExpand,
+.office2007KPT .kptCollapse
+{
+    border: 0 none;
+    cursor: pointer;
+    font-size: 1px;
+    height: 16px;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    width: 16px;
+	display:inline-block;
+	background-image: url(sprite.png);
+    background-position: 2px -137px;
+    background-repeat: no-repeat;	
+}
+.office2007KPT .kptCollapse
+{
+    background-position: 4px -182px;
+    background-repeat: no-repeat;		
+}
+
+
+/*ColumnZone*/
+.office2007DragDummy
+{
+	
+    color: black;
+    font-family: "Segoe UI",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.office2007KPT .kptFieldItem,
+.office2007DragDummy
+{
+	background-image: url("sprite.png");	
+    background-color: #E8F1FC;
+    background-position: 0 -1400px;
+    background-repeat: repeat-x;
+    border-color: #ABC1DE;
+    color: #00156E;
+		
+    border-radius:2px;
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 4px;
+    padding: 0 5px 0 8px;
+    vertical-align: middle;
+    white-space: nowrap;
+	cursor:default;
+}
+.office2007KPT .kptFilterButton,
+.office2007DragDummy .kptFilterButton
+{
+	background-color: transparent;
+	background-image: url(sprite.png);
+	background-position: 3px 0px;
+    height: 12px;
+    width: 20px;
+		
+    border: 0 none;
+    cursor: pointer;
+    margin: 0 0 0 2px;
+    padding: 0;
+    vertical-align: middle;
+	display:inline-block;
+}
+
+.office2007KPT .kptSortButton,
+.office2007DragDummy .kptSortButton
+{
+	background-image: url("sprite.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0 none;
+    cursor: pointer;
+    height: 13px;
+    margin: 0 0 0 2px;
+    padding: 0;
+    vertical-align: middle;
+    width: 14px;
+	display:inline-block;	
+}
+.office2007KPT .kptSortAsc,
+.office2007DragDummy .kptSortAsc
+{
+	/*background-position: 4px -91px, 47px;*/
+	background-position: 7px -115px;
+}
+.office2007KPT .kptSortDesc,
+.office2007DragDummy .kptSortDesc
+{
+	background-position: 100% -115px;
+}
+.office2007KPT .kptSortAscOn,
+.office2007DragDummy .kptSortAscOn
+{
+	/*background-position: 4px -91px, 47px;*/
+	background-position: 7px -106px;
+}
+.office2007KPT .kptSortDescOn,
+.office2007DragDummy .kptSortDescOn
+{
+	background-position: 100% -106px;
+}
+.office2007KPT .kptSortAscOff,
+.office2007DragDummy .kptSortAscOff
+{
+	/*background-position: 4px -91px, 47px;*/
+	background-position: 7px -122px;
+}
+.office2007KPT .kptSortDescOff,
+.office2007DragDummy .kptSortDescOff
+{
+	background-position: 100% -122px;
+}
+
+
+
+.office2007KPT .kptDesc
+{
+	line-height: 25px;
+	color: #00156E;
+	font-style:italic;
+	cursor:default;
+}
+.office2007KPT .kptDragable:hover
+{
+	background-color: #FFE28E;
+	border-color: #D8CA95;
+	background-position: 0 -1500px;
+	color: black;
+	cursor: move;	
+}
+
+
+.office2007KPTReorderTop, .office2007KPTReorderBottom {
+    background: url("PivotGrid/sprite.png") no-repeat scroll -20px -139px transparent;
+}
+.office2007KPTReorderBottom
+{
+	background-position: -20px -161px;
+}
+
+
+
+/*ColumnHeader*/
+
+.office2007KPT .kptColumnHeader,
+.office2007KPT .kptColumnHeaderTotal
+{
+	background-image: url("sprite.png");
+   	background-color: #C3D8F1;
+    background-position: 0 -2000px;
+    background-repeat: repeat-x;
+	
+    border-style: solid;
+    border-width: 0 0 1px 1px;	
+}
+
+.office2007KPT .kptTopIndicator
+{
+	background: url("sprite.png") no-repeat scroll -20px -139px transparent;
+	height:12px;
+	width:12px;
+}
+.office2007KPT .kptBottomIndicator
+{
+	background: url("sprite.png") no-repeat scroll -20px -161px transparent;
+	height:12px;
+	width:12px;
+}
+.office2007KPT .kptDimensionRow,
+.office2007KPT .kptDimensionRow td
+{
+    border: 0 none;
+    height: 0;
+    padding: 0;
+}
+
+
+/*RowHeader*/
+
+.office2007KPT .kptRowHeader
+{
+	background-color: #C3D8F1;
+}
+
+.office2007KPT .kptRowHeaderTotal
+{
+	background-color: #7FA1D1;
+	font-weight: 800;
+}
+.office2007KPT .kptRowHeaderGrandTotal
+{
+	background-color: #E5E5E5;
+	font-weight: 800;
+}
+
+
+
+
+/*Content*/
+.office2007KPT .kptDataCell
+{
+    border-color: #D0D7E5;
+    color: #333333;	
+	background-color: white;
+	
+	white-space: nowrap;	
+    border-style: solid;
+    border-width: 0 0 1px 1px;
+}
+
+
+.office2007KPT .kptRowTotalDataCell
+{
+	background-color: #9AB5DB;
+	font-weight: 600;
+}
+.office2007KPT .kptColumnTotalDataCell
+{
+	background-color: #9AB5DB;
+	font-weight: 600;
+}
+
+.office2007KPT .kptColumnTotalDataCell.kptColumnTotalDataCell
+{
+	background-color: #9AB5DB;
+	font-weight: 600;
+}
+
+.office2007KPT .kptColumnGrandTotalDataCell,
+.office2007KPT .kptRowGrandTotalDataCell
+{
+	background-color: #9AB5DB;
+	font-weight: 600;
+}
+
+
+
+/*Pager*/
+.office2007KPT .kptPager
+{
+
+}
+.office2007KPT .kptPager .kptPageSize,
+.office2007KPT .kptPager .kptNav
+{
+	float: left;
+	padding: 0 10px;
+}
+
+.office2007KPT .kptPager .kptPageSize
+{
+	line-height:22px;
+}
+
+.office2007KPT .kptPager .kptPageSize select
+{
+    font-family: "Segoe UI",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+	margin-left:5px;
+}
+
+.office2007KPT .kptPager .kptInfo
+{
+	float: right;
+	padding: 0 10px;
+}
+
+
+.office2007KPT .kptPager .kptPrev, 
+.office2007KPT .kptPager .kptNext, 
+.office2007KPT .kptPager .kptFirst, 
+.office2007KPT .kptPager .kptLast {
+    float: left;
+    line-height: 22px;
+}
+
+.office2007KPT .kptPager .kptPrev input,
+.office2007KPT .kptPager .kptNext input,
+.office2007KPT .kptPager .kptFirst input,
+.office2007KPT .kptPager .kptLast input
+{
+    background: url("sprite.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    font-size: 1px;
+    height: 22px;
+    padding: 0;
+    vertical-align: top;
+    width: 22px;
+}
+
+.office2007KPT .kptPager .kptPrev a,
+.office2007KPT .kptPager .kptNext a,
+.office2007KPT .kptPager .kptFirst a,
+.office2007KPT .kptPager .kptLast a
+{
+	display: none;
+}
+
+
+.office2007KPT .kptPager .kptFirst input
+{
+    background-position: 0 -240px;
+    margin: 0 3px 0 0;	
+}
+.office2007KPT .kptPager .kptPrev input
+{
+    background-position: 0 -340px;
+    margin: 0 3px 0 0;	
+}
+.office2007KPT .kptPager .kptNext input
+{
+    background-position: 0 -440px;
+    margin: 0 3px 0 0;	
+}
+.office2007KPT .kptPager .kptLast input
+{
+    background-position: 0 -540px;
+    margin: 0 3px 0 0;	
+}
+
+.office2007KPT .kptPager .kptFirst:hover input
+{
+    background-position: 0 -290px;
+    margin: 0 3px 0 0;	
+}
+.office2007KPT .kptPager .kptPrev:hover input
+{
+    background-position: 0 -390px;
+    margin: 0 3px 0 0;	
+}
+.office2007KPT .kptPager .kptNext:hover input
+{
+    background-position: 0 -490px;
+    margin: 0 3px 0 0;	
+}
+.office2007KPT .kptPager .kptLast:hover input
+{
+    background-position: 0 -590px;
+    margin: 0 3px 0 0;	
+}
+
+
+.office2007KPT .kptPager a.kptNum {
+    color: #3B3B3B;
+    line-height: 22px;
+	float: left;
+    margin: 0;
+    padding: 0 5px 0 0;
+    text-decoration: none;	 
+}
+.office2007KPT .kptPager a.kptNum span {
+    line-height: 22px;
+    padding: 0 0 0 5px;
+	float: left;
+}
+
+.office2007KPT .kptPager a.kptNum:hover {
+	background-image: url("sprite.png");
+	background-position: 100% -690px;
+	color:#000000;
+}
+.office2007KPT .kptPager a.kptNum:hover span {
+	background-image: url("sprite.png");
+	background-position: 0 -640px;
+	color:#000000;
+
+}
+
+
+.office2007KPT .kptPager a.kptNumSelected,
+.office2007KPT .kptPager a.kptNumSelected:hover
+{
+	background-image: url("sprite.png");
+    background-position: 100% -790px;
+    border-color: #25A0DA;
+}
+.office2007KPT .kptPager a.kptNumSelected span,
+.office2007KPT .kptPager a.kptNumSelected:hover span
+{
+	background-image: url("sprite.png");
+    background-position: 0 -740px;
+    border-color: #25A0DA;
+}
+
+
+
+/*Filter*/
+
+.office2007KPT .kptFilterPanel .kptFunctionPanel
+{
+	padding: 5px 5px 5px 10px;
+	background-image: url("sprite.png");
+    background-color: #C3D8F1;
+    background-position: 0 -2000px;
+    background-repeat: repeat-x;
+	border-bottom: 1px solid #688CAF;
+}
+
+.office2007KPT .kptFilterPanel .kptOkButton,
+.office2007KPT .kptFilterPanel .kptCancelButton
+{
+    background-color: #E8F1FC;
+    background-image: url("sprite.png");
+    background-position: 0 -1400px;
+    background-repeat: repeat-x;
+    border-color: #ABC1DE;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    color: #00156E;
+	
+    font-family: "Segoe UI",Arial,Helvetica,sans-serif;
+	font-size: 14px;
+	font-weight:bold;
+    height: 25px;
+	cursor:pointer;
+	padding-left:20px;
+	padding-right:20px;
+}
+.office2007KPT .kptFilterPanel .kptCancelButton
+{
+	margin-left:10px;
+}
+
+.office2007KPT .kptFilterPanel .kptOkButton:hover,
+.office2007KPT .kptFilterPanel .kptCancelButton:hover
+{
+	background-color: #FFE28E;
+	border-color: #D8CA95;
+	background-position: 0 -1500px;
+	color: black;
+}
+
+.office2007KPT .kptFilterPanel .kptScrollPanel
+{
+}
+.office2007KPT .kptFilterPanel .kptList
+{
+	margin:0px 10px 10px 10px;	
+	padding:5px 0px 5px 0px;
+	border: 1px solid #688CAF;
+	display:inline-block;
+	min-width:145px;
+}
+
+.office2007KPT .kptFilterPanel .kptIncludeExclude
+{
+	margin:10px 10px 5px 10px;
+}
+
+.office2007KPT .kptFilterPanel .kptFilterMenu
+{
+	margin:20px 10px 20px 10px;
+}
+.office2007KPT .kptListOption
+{
+	padding:1px 20px 1px 5px;
+}
+
+
+.office2007KPT .kptFilterPanel .kptFilterWithValues
+{
+	padding:10px;
+	margin:10px;
+	background-color: #C3D8F1;
+	border:solid 1px #F5F5F5;
+	display:inline-block;
+}
+.office2007KPT .kptFilterPanel .kptFilterWithValues input
+{
+	margin-left:5px;
+	margin-right:5px;
+}
+
+.office2007KPT .kptFilterPanel .kptFilterWithValues select
+{
+	margin-left:5px;
+}
+.office2007KPT .kptFilterPanel .kptFilterWithOptions
+{
+	display:inline-block;
+	margin-left:10px;
+	margin-bottom:50px;
+	background-color: #C3D8F1;
+	border:solid 1px #F5F5F5;
+	
+}
+
+.office2007KPT .kptFilterPanel .kptHighlight
+{
+	background-image: url("sprite.png");
+    background-color: #C3D8F1;
+    background-position: 0 -2000px;
+    background-repeat: repeat-x;
+	border: 1px solid #688CAF;
+}
+
+.office2007KPT .kptStatus .kptLoadingText
+{
+	display:none;
+}
+.office2007KPT .kptLoading .kptLoadingText
+{
+	display:inline;
+}
+.office2007KPT .kptLoading .kptDoneText
+{
+	display:none;
+}
+
+/* Scrolling */
+
+
+.office2007KPT .kptHorizontalScrolling .kptColumnHeaderZone .kptTable
+{
+	position:relative;
+}
+
+.office2007KPT .kptVerticalScrolling .kptContentZone .kptTable,
+.office2007KPT .kptHorizontalScrolling .kptContentZone .kptTable
+{
+	position:relative;
+}
+
+
+.office2007KPT .kptVerticalScrolling .kptRowHeaderZone .kptTable
+{
+	position:relative;
+}
+
+.office2007KPT .kptNoWrap
+{
+	white-space:nowrap;
+}
+
+.office2007KPT .kptFieldItem.text-right ,
+.office2007KPT .kptRowHeader.text-right ,
+.office2007KPT .kptColumnHeader.text-right, 
+.office2007KPT .kptDataCell.text-right ,
+.office2007KPT .kptFilterPanel.text-right 
+{
+	text-align: right;
+}
+
+.office2007KPT .kptFieldItem.rtl ,
+.office2007KPT .kptRowHeader.rtl ,
+.office2007KPT .kptColumnHeader.rtl, 
+.office2007KPT .kptDataCell.rtl ,
+.office2007KPT .kptFilterPanel.rtl 
+{
+	text-align: initial;
+	direction: rtl;
+}

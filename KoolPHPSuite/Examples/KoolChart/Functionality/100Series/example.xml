@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="100Series" usedb="false">
+	<title>PHP 100-Series Chart</title>
+	<metakeywords>php charting, php chart, column chart, area chart, bar chart, line chart, scatter chart, scatter line chart</metakeywords>	 
+	<metadescription>KoolChart is excellent chart for PHP.</metadescription>
+	<description>
+		<![CDATA[ 
+
+<pre>
+<b>To add a column series to the chart, you do:</b>
+
+    $series = new ColumnSeries();
+    $series->Name = "Computers";
+    $series->TooltipsAppearance->DataFormatString = "$ {0} millions";
+    $series->ArrayData(array(34,55,10,40));
+    $chart->PlotArea->AddSeries($series);
+</pre>
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	$KoolControlsFolder = "../../../../KoolControls";//Relative path to "KoolPHPSuite/KoolControls" folder
+        
+	require $KoolControlsFolder."/KoolChart/koolchart.php";
+
+	$chart = new KoolChart("chart");
+	$chart->scriptFolder=$KoolControlsFolder."/KoolChart";	
+	$chart->Title->Text = "Sales report for 2012";
+	$chart->Width = 680;
+	$chart->Height = 500;
+	$chart->PlotArea->XAxis->Title = "Quarters";
+	$chart->PlotArea->XAxis->Set(array("Q1","Q2","Q3","Q4"));
+	$chart->PlotArea->YAxis->Title = "Sales ( .millions)";
+	$chart->PlotArea->YAxis->LabelsAppearance->DataFormatString = "$ {0}";
+    $chart->Legend->Appearance->Position = "right"; //"top", "bottom", "left", "right
+   
+    $numberOfSeries = 100;
+    for ($i=0; $i<$numberOfSeries; $i++)
+    {
+        $series = new ColumnSeries();
+        $series->Stacked = TRUE;
+        $series->Name = $i;
+        $series->TooltipsAppearance->DataFormatString = "$ {0}";
+        $d0 = mt_rand(1, 10);
+        $d1 = mt_rand(2, 10);
+        $d2 = mt_rand(3, 10);
+        $d3 = mt_rand(4, 10);
+        $series->ArrayData(array($d0,$d1,$d2,$d3));
+        $chart->PlotArea->AddSeries($series);    
+    }
+    $chart->Transitions = false;
+    
+?>
+<form id="form1" method="post">
+	<?php echo $chart->Render();?>					
+	<div><i>* <u>Note</u>:</i>Generate your own chart with <a style="color:#B8305E;" target="_blank" href="http://codegen.koolphp.net/generate_koolchart.php">Code Generator</a></div>
+</form>
+
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://codegen.koolphp.net/generate_koolchart.php">Code Generator</doc>
+	</docs>
+</example>

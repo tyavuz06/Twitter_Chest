@@ -1,0 +1,14 @@
+id; parentId; prop; value; desc; type; meta
+1; ; KoolChart2; ; ; Object;
+1_2; 1; Width; 660; Chart's width; Number; {"rowEdit":{"value":true}}
+1_3; 1; Height; 400; Chart's height; Number; {"rowEdit":{"value":true}}
+
+1_20; 1; PlotArea; ; Chart's plot area; Object;
+1_20_4; 1_20; ListOfSeries; ; Array of chart series; Array; 
+1_20_4_1; 1_20_4; Series 0; ; Chart series; Object; 
+1_20_4_1_1; 1_20_4_1; ExplodedRatio; 1.15; Set exploded ratio for pie items' exploding; Number; {"rowEdit":{"value":true}}
+1_20_4_1_2; 1_20_4_1; PieLabel; ; Set options for pie items' labels; Object;
+1_20_4_1_2_1; 1_20_4_1_2; ArcTickGap; 5; Distance from pie to pie-toward tick; Number; {"rowEdit":{"value":true}}
+1_20_4_1_2_2; 1_20_4_1_2; ArcTickSize; 15; Size of pie-toward tick; Number; {"rowEdit":{"value":true}}
+1_20_4_1_2_3; 1_20_4_1_2; LabelTickGap; 5; Distance from label to label-toward tick; Number; {"rowEdit":{"value":true}}
+1_20_4_1_2_4; 1_20_4_1_2; LabelTickSize; 10; Size of label-toward tick; Number; {"rowEdit":{"value":true}}

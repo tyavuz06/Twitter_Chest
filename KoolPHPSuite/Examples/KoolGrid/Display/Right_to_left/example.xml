@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Right_to_left" usedb="true">
+	<title>Basic Filtering</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>KoolGrid starts supporting right-to-left languages. To enable this feature, assign the css class "rtl" to multiple section of the grid.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolGrid starts supporting right-to-left languages. To enable this feature, assign the css class "rtl" or "text-right" to multiple section of the grid: <b>Header - Cell - Filter cell - Function panel - Pager</b>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+
+	require $KoolControlsFolder."/KoolGrid/koolgrid.php";
+	require $KoolControlsFolder."/KoolGrid/ext/datasources/MySQLiDataSource.php";
+	$ds = new MySQLiDataSource($db_con);//This $db_con link has been created inside KoolPHPSuite/Resources/runexample.php
+	$ds->SelectCommand = "select customerNumber,customerName,phone,city from customers";
+
+	$grid = new KoolGrid("grid");
+	$grid->scriptFolder = $KoolControlsFolder."/KoolGrid";
+	$grid->styleFolder="default";
+	$grid->DataSource = $ds;
+	$grid->Width = "655px";
+
+	$grid->RowAlternative = true;
+
+	$grid->AjaxEnabled = true;
+	$grid->AjaxLoadingImage =  $KoolControlsFolder."/KoolAjax/loading/5.gif";
+	$grid->AutoGenerateColumns = true;
+	
+	$grid->AllowFiltering = true;//Enable filtering for all rows;
+		
+	$grid->MasterTable->Pager = new GridPrevNextAndNumericPager();
+	$grid->MasterTable->CssClasses = array(
+	  'cell' => 'rtl',
+	  'header' => 'text-right',
+	  'filter cell' => 'rtl',
+	  'function panel' => 'rtl',
+	  'pager' => 'rtl'
+	);	
+	
+	$grid->Process();
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	<?php echo $grid->Render();?>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/KoolGrid/index.php">KoolGrid</doc>
+	</docs>
+</example>

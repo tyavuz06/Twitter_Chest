@@ -1,0 +1,145 @@
+/* 
+    Created on : Oct 29, 2014, 3:04:16 PM
+    Author     : KoolPHP
+*/
+
+.kulDeleted .kulUpload,
+.kulDeleted .kulRemove,
+.kulDeleted .kulCancel,
+.kulDelete
+{
+	display:none;
+}
+
+.kulDone .kulDelete,
+.kulDeleted .kulStatus
+{
+  display:block;
+}
+
+.kulContainerCover {
+	box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;  
+}
+
+/*.kul-icon {
+    cursor: pointer;
+    background: url(kooluploadersprite.png) no-repeat top left;
+    display:inline-block;
+}
+
+.kul-attachment-32{ background-position: 0 0; width: 32px; height: 32px; } 
+.kul-cross-grey-16{ background-position: 4px -48px; width: 24px; height: 24px; } 
+.kul-minus_grey{ background-position: 0 -88px; width: 16px; height: 16px; } 
+.kul-paperclip224{ background-position: 0 -124px; width: 24px; height: 24px; vertical-align: middle} 
+.kul-paperclip2_32{ background-position: 0 -168px; width: 32px; height: 32px; } 
+.kul-plus_green{ background-position: 0 -220px; width: 16px; height: 16px; } 
+.kul-plus_grey{ background-position: 0 -256px; width: 16px; height: 16px; } 
+.kul-upload_brown{ background-position: 4px -288px; width: 24px; height: 24px; } 
+.kul-upload_grey{ background-position: 0 -328px; width: 16px; height: 16px; } 
+
+
+.koolphpfileformat {
+    background: url(FileFormatSprite.png) no-repeat top left;
+    display:inline-block;
+}
+
+.koolphp-excel-16{ background-position: 0 0; width: 16px; height: 16px; } 
+.koolphp-excel-24{ background-position: 0 -36px; width: 24px; height: 24px; } 
+.koolphp-excel-32{ background-position: 0 -80px; width: 32px; height: 32px; } 
+.koolphp-excel-48{ background-position: 0 -132px; width: 48px; height: 48px; } 
+.koolphp-excel-64{ background-position: 0 -200px; width: 64px; height: 64px; } 
+.koolphp-excel_2-16{ background-position: 0 -284px; width: 16px; height: 16px; } 
+.koolphp-excel_2-24{ background-position: 0 -320px; width: 24px; height: 24px; } 
+.koolphp-excel_2-32{ background-position: 0 -364px; width: 32px; height: 32px; } 
+.koolphp-excel_2-48{ background-position: 0 -416px; width: 48px; height: 48px; } 
+.koolphp-excel_2-64{ background-position: 0 -484px; width: 64px; height: 64px; } 
+.koolphp-excel_3-16{ background-position: 0 -568px; width: 16px; height: 16px; } 
+.koolphp-excel_3-24{ background-position: 0 -604px; width: 24px; height: 24px; } 
+.koolphp-excel_3-32{ background-position: 0 -648px; width: 32px; height: 32px; } 
+.koolphp-excel_3-48{ background-position: 0 -700px; width: 48px; height: 48px; } 
+.koolphp-excel_3-64{ background-position: 0 -768px; width: 64px; height: 64px; } 
+.koolphp-file_2-16{ background-position: 0 -852px; width: 16px; height: 15px; } 
+.koolphp-file_2-24{ background-position: 0 -887px; width: 24px; height: 23px; } 
+.koolphp-file_2-32{ background-position: 0 -930px; width: 32px; height: 31px; } 
+.koolphp-file_2-48{ background-position: 0 -981px; width: 48px; height: 46px; } 
+.koolphp-image-16{ background-position: 0 -1047px; width: 16px; height: 16px; } 
+.koolphp-image-24{ background-position: 0 -1083px; width: 24px; height: 24px; } 
+.koolphp-image-32{ background-position: 0 -1127px; width: 32px; height: 32px; } 
+.koolphp-image-48{ background-position: 0 -1179px; width: 48px; height: 48px; } 
+.koolphp-image-64{ background-position: 0 -1247px; width: 64px; height: 64px; } 
+.koolphp-image_2-16{ background-position: 0 -1331px; width: 16px; height: 16px; } 
+.koolphp-image_2-24{ background-position: 0 -1367px; width: 24px; height: 24px; } 
+.koolphp-image_2-32{ background-position: 0 -1411px; width: 32px; height: 32px; } 
+.koolphp-image_2-48{ background-position: 0 -1463px; width: 48px; height: 48px; } 
+.koolphp-image_2-64{ background-position: 0 -1531px; width: 64px; height: 64px; } 
+.koolphp-image_3-16{ background-position: 0 -1615px; width: 16px; height: 16px; } 
+.koolphp-image_3-24{ background-position: 0 -1651px; width: 24px; height: 24px; } 
+.koolphp-image_3-32{ background-position: 0 -1695px; width: 32px; height: 32px; } 
+.koolphp-image_3-48{ background-position: 0 -1747px; width: 48px; height: 48px; } 
+.koolphp-image_3-64{ background-position: 0 -1815px; width: 64px; height: 64px; } 
+.koolphp-pdf-16{ background-position: 0 -1899px; width: 16px; height: 16px; } 
+.koolphp-pdf-24{ background-position: 0 -1935px; width: 24px; height: 24px; } 
+.koolphp-pdf-32{ background-position: 0 -1979px; width: 32px; height: 32px; } 
+.koolphp-pdf-48{ background-position: -84px 0; width: 48px; height: 48px; } 
+.koolphp-pdf-64{ background-position: -84px -68px; width: 64px; height: 64px; } 
+.koolphp-pdf_2-16{ background-position: -84px -152px; width: 16px; height: 16px; } 
+.koolphp-pdf_2-24{ background-position: -84px -188px; width: 24px; height: 24px; } 
+.koolphp-pdf_2-32{ background-position: -84px -232px; width: 32px; height: 32px; } 
+.koolphp-pdf_2-48{ background-position: -84px -284px; width: 48px; height: 48px; } 
+.koolphp-pdf_2-64{ background-position: -84px -352px; width: 64px; height: 64px; } 
+.koolphp-pdf_3-16{ background-position: -84px -436px; width: 16px; height: 16px; } 
+.koolphp-pdf_3-24{ background-position: -84px -472px; width: 24px; height: 24px; } 
+.koolphp-pdf_3-32{ background-position: -84px -516px; width: 32px; height: 32px; } 
+.koolphp-pdf_3-48{ background-position: -84px -568px; width: 48px; height: 48px; } 
+.koolphp-pdf_3-64{ background-position: -84px -636px; width: 64px; height: 64px; } 
+.koolphp-powerpoint-16{ background-position: -84px -720px; width: 16px; height: 16px; } 
+.koolphp-powerpoint-24{ background-position: -84px -756px; width: 24px; height: 24px; } 
+.koolphp-powerpoint-32{ background-position: -84px -800px; width: 32px; height: 32px; } 
+.koolphp-powerpoint-48{ background-position: -84px -852px; width: 48px; height: 48px; } 
+.koolphp-powerpoint-64{ background-position: -84px -920px; width: 64px; height: 64px; } 
+.koolphp-powerpoint_2-16{ background-position: -84px -1004px; width: 16px; height: 16px; } 
+.koolphp-powerpoint_2-24{ background-position: -84px -1040px; width: 24px; height: 24px; } 
+.koolphp-powerpoint_2-32{ background-position: -84px -1084px; width: 32px; height: 32px; } 
+.koolphp-powerpoint_2-48{ background-position: -84px -1136px; width: 48px; height: 48px; } 
+.koolphp-powerpoint_2-64{ background-position: -84px -1204px; width: 64px; height: 64px; } 
+.koolphp-powerpoint_3-16{ background-position: -84px -1288px; width: 16px; height: 16px; } 
+.koolphp-powerpoint_3-24{ background-position: -84px -1324px; width: 24px; height: 24px; } 
+.koolphp-powerpoint_3-32{ background-position: -84px -1368px; width: 32px; height: 32px; } 
+.koolphp-powerpoint_3-48{ background-position: -84px -1420px; width: 48px; height: 48px; } 
+.koolphp-powerpoint_3-64{ background-position: -84px -1488px; width: 64px; height: 64px; } 
+.koolphp-text-16{ background-position: -84px -1572px; width: 16px; height: 16px; } 
+.koolphp-text-24{ background-position: -84px -1608px; width: 24px; height: 24px; } 
+.koolphp-text-32{ background-position: -84px -1652px; width: 32px; height: 32px; } 
+.koolphp-text-48{ background-position: -84px -1704px; width: 48px; height: 48px; } 
+.koolphp-text-64{ background-position: -84px -1772px; width: 64px; height: 64px; } 
+.koolphp-text_2-16{ background-position: -84px -1856px; width: 16px; height: 16px; } 
+.koolphp-text_2-24{ background-position: -84px -1892px; width: 24px; height: 24px; } 
+.koolphp-text_2-32{ background-position: -84px -1936px; width: 32px; height: 32px; } 
+.koolphp-text_2-48{ background-position: -168px 0; width: 48px; height: 48px; } 
+.koolphp-text_2-64{ background-position: -168px -68px; width: 64px; height: 64px; } 
+.koolphp-text_3-16{ background-position: -168px -152px; width: 16px; height: 16px; } 
+.koolphp-text_3-24{ background-position: -168px -188px; width: 24px; height: 24px; } 
+.koolphp-text_3-32{ background-position: -168px -232px; width: 32px; height: 32px; } 
+.koolphp-text_3-48{ background-position: -168px -284px; width: 48px; height: 48px; } 
+.koolphp-text_3-64{ background-position: -168px -352px; width: 64px; height: 64px; } 
+.koolphp-word-16{ background-position: -168px -436px; width: 16px; height: 16px; } 
+.koolphp-word-24{ background-position: -168px -472px; width: 24px; height: 24px; } 
+.koolphp-word-32{ background-position: -168px -516px; width: 32px; height: 32px; } 
+.koolphp-word-48{ background-position: -168px -568px; width: 48px; height: 48px; } 
+.koolphp-word-64{ background-position: -168px -636px; width: 64px; height: 64px; } 
+.koolphp-word_2-16{ background-position: -168px -720px; width: 16px; height: 16px; } 
+.koolphp-word_2-24{ background-position: -168px -756px; width: 24px; height: 24px; } 
+.koolphp-word_2-32{ background-position: -168px -800px; width: 32px; height: 32px; } 
+.koolphp-word_2-48{ background-position: -168px -852px; width: 48px; height: 48px; } 
+.koolphp-word_2-64{ background-position: -168px -920px; width: 64px; height: 64px; } 
+.koolphp-word_3-16{ background-position: -168px -1004px; width: 16px; height: 16px; } 
+.koolphp-word_3-24{ background-position: -168px -1040px; width: 24px; height: 24px; } 
+.koolphp-word_3-32{ background-position: -168px -1084px; width: 32px; height: 32px; } 
+.koolphp-word_3-48{ background-position: -168px -1136px; width: 48px; height: 48px; } 
+.koolphp-word_3-64{ background-position: -168px -1204px; width: 64px; height: 64px; } 
+.koolphp-zip_2-16{ background-position: -168px -1288px; width: 16px; height: 15px; } 
+.koolphp-zip_2-24{ background-position: -168px -1323px; width: 24px; height: 23px; } 
+.koolphp-zip_2-32{ background-position: -168px -1366px; width: 32px; height: 31px; } 
+.koolphp-zip_2-48{ background-position: -168px -1417px; width: 48px; height: 46px; } */

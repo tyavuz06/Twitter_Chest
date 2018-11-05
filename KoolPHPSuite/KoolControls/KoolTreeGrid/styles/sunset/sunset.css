@@ -1,0 +1,360 @@
+.sunsetKTG,
+.sunsetKTG *
+{
+    margin:0px;
+    padding:0px;
+}
+.sunsetKTG
+{
+    /*display:inline-block;*/
+    zoom:1;
+    *display:inline;
+}
+
+.sunsetKTG *,
+.sunsetKTG input,
+.sunsetKTG select,
+.sunsetKTG textarea
+{
+	font-family:arial,sans-serif;
+        /*font-size:11px;*/	
+}
+
+.sunsetKTG #mytreeview\.root
+{
+    border:0px solid;
+}
+
+.sunsetKTG table.ktg_table
+{
+    border:0px solid grey;
+    border-collapse:collapse;
+}
+.sunsetKTG table.ktg_table th
+{
+    /*border:0px;*/
+}
+.sunsetKTG table.ktg_table td
+{
+    border:0px solid grey;
+}
+
+.sunsetKTG table.ktg_table,
+.sunsetKTG table.ktg_table th,
+.sunsetKTG table.ktg_table td
+{
+    padding-left: 5px;
+}
+
+.sunsetKTG .td_ktv
+{
+    padding-left: 0px !important;
+}
+
+
+
+
+.sunsetKTG .ktg_table
+{
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/*Header*/
+.sunsetKTG .ktg_header,
+.sunsetKTG .ktg_header th
+{
+    background:url(sprite.gif) repeat-x scroll 0 -2300px #B94D0A;
+    border-bottom:1px solid #71250A;
+    border-left:1px solid #872B07;
+    border-right:1px solid #CD6A3F;
+    font-weight:bold;
+    text-align:left;
+    color: #FFFFFF;
+    padding: 2px;
+}
+
+.sunsetKTG .kgrRow .kgrCell .kgrIn
+{
+	margin:4px 8px 3px 8px;
+	cursor: default;
+}
+
+.sunsetKTG .ktg_altRow
+{
+    background-color: rgba(220,80,60,0.2)  !important;
+/*    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C8C8C8C, endColorstr=#4C8C8C8C)";*/
+}
+
+.sunsetKTG .ktvLI
+{
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    /*line-height:20px;*/
+    /*font-size:11px;*/
+
+    border:0px solid grey;
+    border-right: 0px;
+    border-bottom: 0px;  
+    border-left: 0px;
+}
+
+/*ktvImage: Image in the node content*/
+.sunsetKTG .ktvImage
+{
+    vertical-align:text-bottom;
+}
+
+
+
+
+/*ktvOver: Apply to treenode content when mouse is over*/
+.sunsetKTG .ktvOver .ktvText
+{
+    cursor:default;
+}
+/*ktvOver: Apply to treenode content when mouse is selected*/
+.sunsetKTG .ktvSelected .ktvText
+{
+    border:1px solid #6699cc;
+    background-color:#ccddee;
+}
+
+/*ktvPM: PlusMinus button in general*/
+.sunsetKTG .ktvPM
+{
+    height:9px;
+    width:9px;
+    margin:3px 8px 0pt -16px;
+    cursor:pointer;
+    display:inline-block;
+    font-size:0pt;
+    padding:0pt;
+    vertical-align:top;
+    background:yellow;
+}
+
+html>body .sunsetKTG .ktvPM
+{
+    display:-moz-inline-box;
+}
+
+
+/*ktvMinus: Minus button in detail*/
+.sunsetKTG .ktvMinus
+{
+    background:url(pm.gif) no-repeat scroll 0pt -7pt;
+}
+
+/*ktvPlus: Plus button in detail*/
+.sunsetKTG .ktvPlus
+{
+    background:url(pm.gif) no-repeat scroll 0pt 0pt;
+}
+
+/*ktvLoading: Ajax loading image*/
+.sunsetKTG .ktvLoading
+{
+    width:16px;
+    height:16px;
+    background:url(loading.gif);
+    display:inline-block;
+    vertical-align:top;
+}
+html>body .sunsetKTG .ktvLoading
+{
+    display:-moz-inline-box;
+}
+
+/*ktvEdit: Edit input when node is edited*/
+.sunsetKTG .ktvEdit
+{
+    border:1px solid #6699cc;
+    background-color:#ccddee;
+    color:#000000;
+    font-family:tahoma,verdana,sans-serif;
+    font-size:11px;
+    font-size-adjust:none;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+}
+
+/*ktvEdit: Dump treenode when drag*/
+.sunsetKTG .ktvDrag
+{
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    opacity:0.5;
+}
+
+/*ktvDrop: Apply to treenode content when a node is selected to drop*/
+.sunsetKTG .ktvDrop .ktvText
+{
+    border:1px solid #6699cc;
+    background-color:#ccddee;
+    cursor:default;
+}
+
+
+/*ktvTop: Node on top*/
+/*ktvMid: Node in middle*/
+/*ktvBot: Node on bottom*/
+
+.sunsetKTG .ktvMid, 
+.sunsetKTG .ktvTop, 
+.sunsetKTG .ktvBot
+{
+    padding-left:20px;
+}
+
+/*ktvUL: Node container*/
+.sunsetKTG .ktvUL
+{
+    margin:0px;
+    padding-left:0px;
+}
+
+
+.sunsetKTG .ktvUL .ktvUL,
+.sunsetKTG .ktvUL .ktvUL .ktvUL
+{
+    margin:0px;
+    padding-left:0px;
+}
+
+
+/*ktvNoPadding: When showplusminus=false or rootnode visible = false*/
+.sunsetKTG .ktvNoPadding .ktvUL
+{
+    margin:0px;
+    padding-left:0px;
+}
+
+.sunsetKTG .ktvNoPadding .ktvUL .ktvUL
+{
+    margin:0px;
+    padding-left:20px;
+}
+
+/*ktvInv: Make root node invisible*/
+.sunsetKTG .ktvInv
+{
+    display:none;
+}
+
+/*ktvNoPM: Make root node does not show PlusMinus button*/
+.sunsetKTG .ktvNoPM
+{
+    padding-left:0px;
+    background:none;
+}
+.sunsetKTG .ktvNoPM .ktvPM
+{
+    display:none;
+}
+
+
+
+/*ktvLines: Render tree with lines---------------------*/
+
+.sunsetKTG .ktvLines .ktvLI
+{
+    background:url(v.gif) no-repeat scroll 0pt;	
+}
+
+.sunsetKTG .ktvLines .ktvUL
+{
+    background:url(v.gif) no-repeat scroll 0pt;
+}
+
+.sunsetKTG .ktvLines .ktvLast .ktvBot
+{
+    background:url(L.gif) no-repeat scroll 0pt;
+}
+
+
+.sunsetKTG .ktvLines .ktvLast,
+.sunsetKTG .ktvLines .ktvLast .ktvUL
+{
+    background:none;
+}
+
+.sunsetKTG .ktvLines .ktvTop,
+.sunsetKTG .ktvLines .ktvMid,
+.sunsetKTG .ktvLines .ktvBot
+{
+    background:url(mid.gif) no-repeat scroll 0pt;
+}
+
+.sunsetKTG .ktvLines .ktvLast .ktvTop
+{
+    background:url(horizon.gif) no-repeat scroll 0pt;
+}
+
+.sunsetKTG .ktvLines .ktvLast .ktvNoPM
+{
+    background:none;
+}
+
+.sunsetKTG .sunsetKTV .ktvText
+{
+    /*border:1px solid transparent;*/
+    /*	color:#000000;
+        font-family:tahoma,verdana,sans-serif;
+        font-size:11px;
+        font-size-adjust:none;
+        font-style:normal;
+        font-variant:normal;
+        font-weight:normal;
+        line-height:1.273em;
+        padding-left:2px;
+        padding-right:2px;	
+        line-height:20px;*/
+/*    color:#000000;
+    font-family:tahoma,verdana,sans-serif;
+    font-size:13px;*/
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    padding-left:2px;
+    padding-right:2px;
+    line-height:20px;
+    font-size-adjust:inherit;
+    font-size: 12px;
+    /*color: #03C;*/
+}
+
+.sunsetKTG .ktvText
+{
+    /*border:1px solid transparent;*/
+/*    color:#000000;
+    font-family:tahoma,verdana,sans-serif;
+    font-size:13px;*/
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    padding-left:2px;
+    padding-right:2px;
+    line-height:20px;
+    /*font-size-adjust:inherit;*/
+
+    /*word-wrap:break-word*/
+}
+
+.sunsetKTG .ktvTextInput
+{
+    margin-left: 0px;
+    padding-left: 2px;
+}
+
+.sunsetKTG .ktvTextSelect
+{
+    margin-left: 0px;
+}
+
+.sunsetKTG .ktvTextCheckbox
+{
+    margin-left: 2px;
+}

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="SortingData" usedb="true">
+	<title>Data Sorting Feature</title>
+	<metakeywords>php pivot table, php pivot grid, pivot table, pivot grid, php data analysis, php business tool, excel-like data summarization</metakeywords>	 
+	<metadescription></metadescription>
+	<description>
+		<![CDATA[ 
+
+<pre>
+In order to turn on data sorting features of KoolPivotTable, you do
+
+	<b>$pivot->AllowSortingData = true;</b>
+</pre>
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+    /*
+     * This file is ready to run as standalone example. However, please do:
+     * 1. Add tags <html><head><body> to make a complete page
+     * 2. Change relative path in $KoolControlFolder variable to correctly point to KoolControls folder 
+     */
+	
+	$KoolControlsFolder = "../../../../KoolControls";//Relative path to "KoolPHPSuite/KoolControls" folder
+
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+
+	require $KoolControlsFolder."/KoolPivotTable/koolpivottable.php";
+
+	if(isset($_POST["style_select"]))
+	{
+		$_SESSION["style_select"] = $_POST["style_select"];
+	}
+	else
+	{
+		if (!$koolajax->isCallback)
+		{
+			//Page Init: show default style
+			$_SESSION["style_select"] = "office2007";
+		}
+	}
+		
+	$ds = new MySQLiPivotDataSource($db_con);//This $db_con link has been created inside KoolPHPSuite/Resources/runexample.php
+	$ds->select("customers.customerName, products.productName AS productName, products.productLine AS product_Line, (orderdetails.quantityOrdered * orderdetails.priceEach) AS dollar_sales, (orderdetails.quantityOrdered * orderdetails.priceEach) AS dollar_sales2")->from("customers")->join("orders")->on("orders.customerNumber = customers.customerNumber")->join("orderdetails")->on( "orders.orderNumber = orderdetails.orderNumber")->join("products")->on("products.productCode = orderdetails.productCode");
+
+	$pivot = new KoolPivotTable("pivot");
+	$pivot->scriptFolder = $KoolControlsFolder."/KoolPivotTable";
+	$pivot->styleFolder = $_SESSION["style_select"];
+	$pivot->DataSource = $ds;
+
+	//Turn on ajax features.
+	$pivot->AjaxEnabled = true;
+
+	//Set the Width of pivot and use horizontal scrolling
+	$pivot->Width = "800px";
+	$pivot->HorizontalScrolling = true;
+
+	//Set the Height of pivot and use Vertical Scrolling
+	$pivot->Height = "450px";
+	$pivot->VerticalScrolling = true;
+
+	//Allow filtering
+	$pivot->AllowFiltering = true;
+	//Allow sorting fields
+	$pivot->AllowSorting = true;
+	//Allow sorting data
+	$pivot->AllowSortingData = true;
+	//Allow reordering
+	$pivot->AllowReorder = true;
+
+
+	//Make the RowHeader wider.
+	$pivot->Appearance->RowHeaderMinWidth = "250px";
+
+	//Use the Prev and Next Numneric Pager
+	$pivot->Pager = new PivotPrevNextAndNumericPager();
+	$pivot->Pager->PageSize = 20;
+
+	//Turn on caching to help pivot working faster.	
+    $pivot->AllowCaching = true;
+    
+
+    //Data Field
+    $field = new PivotSumField("dollar_sales");
+    $field->Text = "Dollar Sales";
+    $field->FormatString = "{n}";
+    $field->AllowReorder = false;
+    $pivot->AddDataField($field);
+    //Set data sorting by this data field
+    $pivot->SetDataFieldForSorting($field);
+    
+    //Data Field
+    $field = new PivotPercentageSumField("dollar_sales2");
+    $field->Text = "percentage";
+    $field->FormatString = "{n}%";
+    $field->AllowReorder = false;
+    $pivot->AddDataField($field);
+    
+    //Row Fields
+    $field = new PivotField("customers.customerName");
+    $field->Text = "Customer";
+    $pivot->AddRowField($field);
+
+    //Column Fields
+    $field = new PivotField("product_Line");
+    $field->Text = "Product Line";
+    $pivot->AddColumnField($field);
+    
+    $field = new PivotField("productName");
+    $field->Text = "Product";
+    $pivot->AddColumnField($field);
+
+    //Process the pivot
+    $pivot->Process();
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	
+	<div style="padding-top:10px;">
+		<?php echo $pivot->Render();?>
+	</div>
+</form>
+
+
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolPivotTable/PHP/KoolPivotTable/index.php#styleFolder">styleFolder</doc>
+	</docs>
+</example>

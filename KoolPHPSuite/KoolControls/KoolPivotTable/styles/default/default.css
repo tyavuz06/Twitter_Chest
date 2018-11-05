@@ -1,0 +1,637 @@
+.defaultKPT,
+.defaultKPT_UpdatePanel
+{
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+	overflow:hidden;
+}
+.defaultKPT
+{
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #E5E5E5;
+    color: black;
+    font-family: "Segoe UI",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+}
+.defaultKPT .kptTable
+{
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;		
+}
+.defaultKPT td
+{
+	border-color: #E5E5E5;
+    padding: 3px 8px 3px 7px;
+    text-align: left;
+    vertical-align: top;
+    border-style: solid;
+    border-width: 0 0 1px 1px;
+	overflow:hidden;
+}
+
+.defaultKPT .kptFilterZone
+{
+	border-left: 0 none;
+	background-image: url("sprite.png");
+    background-color: white;
+    background-position: 0 -2000px;
+    background-repeat: repeat-x;
+
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+.defaultKPT .kptDataZone
+{
+	background-image: url("sprite.png");
+    background-color: white;
+    background-position: 0 -2000px;
+    background-repeat: repeat-x;	
+	white-space: nowrap;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+	border-left:0px;
+}
+.defaultKPT .kptColumnZone
+{
+	background-image: url("sprite.png");
+    background-color: white;
+    background-position: 0 -2000px;
+    background-repeat: repeat-x;	
+	white-space: nowrap;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;	
+}
+.defaultKPT .kptRowZone
+{
+	border-left:0px;
+}
+.defaultKPT .kptColumnHeaderZone
+{
+	padding: 0;
+	border-bottom: 0 none;	
+}
+.defaultKPT .kptRowHeaderZone
+{
+	border-left:0px;
+	padding: 0;
+	border-bottom: 0 none;	
+}
+.defaultKPT .kptContentZone
+{
+	padding: 0;
+	border-bottom: 0 none;	
+}
+
+.defaultKPT .kptVerticalScrollingZone
+{
+	padding: 0;
+}
+.defaultKPT .kptHorizontalScrollingZone
+{
+	border-left:0px;
+	padding: 0;
+}
+.defaultKPT .kptPagerZone
+{
+	border-left:0px;
+	padding: 5px 0 4px;
+}
+
+.defaultKPT .kptStatusZone
+{
+	border-left:0px;
+}
+
+.defaultKPT .kptColumnHeaderZone .kptTable,
+.defaultKPT .kptRowHeaderZone .kptTable,
+.defaultKPT .kptContentZone .kptTable 
+{
+    margin-left: -1px;
+}
+
+
+.defaultKPT .kptRowZone td
+{
+	border:0px;
+	padding:0px;
+}
+
+.defaultKPT .kptExpand,
+.defaultKPT .kptCollapse
+{
+    border: 0 none;
+    cursor: pointer;
+    font-size: 1px;
+    height: 16px;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    width: 16px;
+	display:inline-block;
+	background-image: url(sprite.png);
+    background-position: 2px -137px;
+    background-repeat: no-repeat;	
+}
+.defaultKPT .kptCollapse
+{
+    background-position: 4px -182px;
+    background-repeat: no-repeat;		
+}
+
+
+/*ColumnZone*/
+.defaultDragDummy
+{
+	
+    color: black;
+    font-family: "Segoe UI",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.defaultKPT .kptFieldItem,
+.defaultDragDummy
+{
+    background-color: white;
+    border-color: #CDCDCD;
+    color: black;
+    border-radius:2px;
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 4px;
+    padding: 0 5px 0 8px;
+    vertical-align: middle;
+    white-space: nowrap;
+	cursor: default;		
+}
+.defaultKPT .kptFilterButton,
+.defaultDragDummy .kptFilterButton
+{
+	background-image: url(sprite.png);
+	background-position: 6px 3px;
+    height: 20px;
+    width: 22px;	
+    border: 0 none;
+    cursor: pointer;
+    margin: 0 0 0 2px;
+    padding: 0;
+    vertical-align: middle;
+	display:inline-block;
+}
+
+.defaultKPT .kptSortButton,
+.defaultDragDummy .kptSortButton
+{
+	background-image: url("sprite.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0 none;
+    cursor: pointer;
+    height: 11px;
+    margin: 0 0 0 2px;
+    padding: 0;
+    vertical-align: middle;
+    width: 14px;
+	display:inline-block;	
+}
+.defaultKPT .kptSortAsc,
+.defaultDragDummy .kptSortAsc
+{
+	background-position: 7px -105px;
+}
+.defaultKPT .kptSortDesc,
+.defaultDragDummy .kptSortDesc
+{
+	background-position: 7px -123px;
+}
+.defaultKPT .kptSortAscOn,
+.defaultDragDummy .kptSortAscOn
+{
+	/*background-position: 4px -91px, 47px;*/
+	background-position: 7px -105px;
+}
+.defaultKPT .kptSortDescOn,
+.defaultDragDummy .kptSortDescOn
+{
+	background-position: 100% -105px;
+}
+.defaultKPT .kptSortAscOff,
+.defaultDragDummy .kptSortAscOff
+{
+	/*background-position: 4px -91px, 47px;*/
+	background-position: 5px -123px;
+}
+.defaultKPT .kptSortDescOff,
+.defaultDragDummy .kptSortDescOff
+{
+	background-position: 100% -123px;
+}
+
+
+
+.defaultKPT .kptDesc
+{
+	line-height: 25px;
+	color:#AAAAAA;
+	font-style:italic;
+	cursor:default;
+}
+.defaultKPT .kptDragable:hover
+{
+	background-color: #E5E5E5;
+	border-color: #E5E5E5;
+	color: black;
+	cursor:move;
+}
+
+
+.defaultKPTReorderTop, .defaultKPTReorderBottom {
+    background: url("PivotGrid/sprite.png") no-repeat scroll -20px -139px transparent;
+}
+.defaultKPTReorderBottom
+{
+	background-position: -20px -161px;
+}
+
+
+
+/*ColumnHeader*/
+
+.defaultKPT .kptColumnHeader,
+.defaultKPT .kptColumnHeaderTotal
+{
+	background-image: url("sprite.png");
+   	background-color: white;
+    background-position: 0 -2000px;
+    background-repeat: repeat-x;
+	
+    border-style: solid;
+    border-width: 0 0 1px 1px;	
+}
+
+.defaultKPT .kptTopIndicator
+{
+	background: url("sprite.png") no-repeat scroll -20px -139px transparent;
+	height:12px;
+	width:12px;
+}
+.defaultKPT .kptBottomIndicator
+{
+	background: url("sprite.png") no-repeat scroll -20px -161px transparent;
+	height:12px;
+	width:12px;
+}
+.defaultKPT .kptDimensionRow,
+.defaultKPT .kptDimensionRow td
+{
+    border: 0 none;
+    height: 0;
+    padding: 0;
+}
+
+/*RowHeader*/
+
+.defaultKPT .kptRowHeader
+{
+	background-color: white;
+}
+
+.defaultKPT .kptRowHeaderTotal
+{
+	background-color: #E5E5E5;
+	font-weight: 800;
+}
+.defaultKPT .kptRowHeaderGrandTotal
+{
+	background-color: #E5E5E5;
+	font-weight: 800;
+}
+
+
+
+
+/*Content*/
+.defaultKPT .kptDataCell
+{
+	border-color: #E5E5E5;
+	white-space: nowrap;
+	
+    border-style: solid;
+    border-width: 0 0 1px 1px;
+}
+
+
+.defaultKPT .kptRowTotalDataCell
+{
+	background-color: #F6F6F6;
+}
+.defaultKPT .kptColumnTotalDataCell
+{
+	background-color: #F6F6F6;
+}
+
+.defaultKPT .kptColumnTotalDataCell.kptColumnTotalDataCell
+{
+	background-color: #E5E5E5;
+}
+
+.defaultKPT .kptColumnGrandTotalDataCell,
+.defaultKPT .kptRowGrandTotalDataCell
+{
+	background-color: #E5E5E5;
+}
+
+
+
+/*Pager*/
+.defaultKPT .kptPager
+{
+
+}
+.defaultKPT .kptPager .kptPageSize,
+.defaultKPT .kptPager .kptNav
+{
+	float: left;
+	padding: 0 10px;
+}
+.defaultKPT .kptPager .kptPageSize
+{
+	line-height:22px;
+}
+
+.defaultKPT .kptPager .kptPageSize select
+{
+    font-family: "Segoe UI",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+	margin-left:5px;
+}
+
+.defaultKPT .kptPager .kptInfo
+{
+	float: right;
+	padding: 0 10px;
+}
+
+
+.defaultKPT .kptPager .kptPrev, 
+.defaultKPT .kptPager .kptNext, 
+.defaultKPT .kptPager .kptFirst, 
+.defaultKPT .kptPager .kptLast {
+    float: left;
+    line-height: 22px;
+    margin: 0 1px;
+}
+
+.defaultKPT .kptPager .kptPrev input,
+.defaultKPT .kptPager .kptNext input,
+.defaultKPT .kptPager .kptFirst input,
+.defaultKPT .kptPager .kptLast input
+{
+    background: url("sprite.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    font-size: 1px;
+    height: 22px;
+    padding: 0;
+    vertical-align: top;
+    width: 22px;
+}
+
+.defaultKPT .kptPager .kptPrev a,
+.defaultKPT .kptPager .kptNext a,
+.defaultKPT .kptPager .kptFirst a,
+.defaultKPT .kptPager .kptLast a
+{
+	display: none;
+}
+
+
+.defaultKPT .kptPager .kptFirst input
+{
+    background-position: 0 -240px;
+    margin: 0 3px 0 0;	
+}
+.defaultKPT .kptPager .kptPrev input
+{
+    background-position: 0 -340px;
+    margin: 0 3px 0 0;	
+}
+.defaultKPT .kptPager .kptNext input
+{
+    background-position: 0 -440px;
+    margin: 0 3px 0 0;	
+}
+.defaultKPT .kptPager .kptLast input
+{
+    background-position: 0 -540px;
+    margin: 0 3px 0 0;	
+}
+
+.defaultKPT .kptPager .kptFirst:hover input
+{
+    background-position: 0 -290px;
+    margin: 0 3px 0 0;	
+}
+.defaultKPT .kptPager .kptPrev:hover input
+{
+    background-position: 0 -390px;
+    margin: 0 3px 0 0;	
+}
+.defaultKPT .kptPager .kptNext:hover input
+{
+    background-position: 0 -490px;
+    margin: 0 3px 0 0;	
+}
+.defaultKPT .kptPager .kptLast:hover input
+{
+    background-position: 0 -590px;
+    margin: 0 3px 0 0;	
+}
+
+
+.defaultKPT .kptPager a.kptNum {
+    border: 1px solid #FFFFFF;
+    color: #3B3B3B;
+    line-height: 20px;
+	float: left;
+    margin: 0;
+    padding: 0 5px 0 0;
+    text-decoration: none;	 
+}
+.defaultKPT .kptPager a.kptNum span {
+    line-height: 22px;
+    padding: 0 0 0 5px;
+}
+
+.defaultKPT .kptPager a.kptNum:hover {
+	color:#000000;
+	background:#E5E5E5;
+}
+
+.defaultKPT .kptPager a.kptNumSelected {
+    background: none repeat scroll 0 0 transparent;
+    border-color: #25A0DA;
+}
+
+.defaultKPT .kptPager a.kptNumSelected:hover {
+    background: none repeat scroll 0 0 transparent;
+    color: #3B3B3B;
+}
+
+
+
+
+/*Filter*/
+
+.defaultKPT .kptFilterPanel .kptFunctionPanel
+{
+	padding: 5px 5px 5px 10px;
+	border-bottom:solid 1px #E5E5E5;
+	background-color:#FAFAFA;
+}
+
+.defaultKPT .kptFilterPanel .kptOkButton,
+.defaultKPT .kptFilterPanel .kptCancelButton
+{
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #E5E5E5;
+    color: black;
+    font-family: "Segoe UI",Arial,Helvetica,sans-serif;
+    font-size: 14px;
+	font-weight:bold;
+    height: 25px;
+	cursor:pointer;
+	padding-left:20px;
+	padding-right:20px;
+}
+.defaultKPT .kptFilterPanel .kptCancelButton
+{
+	margin-left:10px;
+}
+
+.defaultKPT .kptFilterPanel .kptOkButton:hover,
+.defaultKPT .kptFilterPanel .kptCancelButton:hover
+{
+	background: none repeat scroll 0 0 #E5E5E5;
+}
+
+.defaultKPT .kptFilterPanel .kptScrollPanel
+{
+}
+.defaultKPT .kptFilterPanel .kptList
+{
+	margin:0px 10px 10px 10px;	
+	padding:5px 0px 5px 0px;
+	border: 1px solid #E5E5E5;
+	display:inline-block;
+	min-width:145px;
+}
+
+.defaultKPT .kptFilterPanel .kptIncludeExclude
+{
+	margin:10px 10px 5px 10px;
+}
+
+.defaultKPT .kptFilterPanel .kptFilterMenu
+{
+	margin:20px 10px 20px 10px;
+}
+.defaultKPT .kptListOption
+{
+	padding:1px 20px 1px 5px;
+}
+
+
+.defaultKPT .kptFilterPanel .kptFilterWithValues
+{
+	padding:10px;
+	margin:10px;
+	background:#F5F5F5;
+	border:solid 1px #F5F5F5;
+	display:inline-block;
+}
+.defaultKPT .kptFilterPanel .kptFilterWithValues input
+{
+	margin-left:5px;
+	margin-right:5px;
+}
+
+.defaultKPT .kptFilterPanel .kptFilterWithValues select
+{
+	margin-left:5px;
+}
+.defaultKPT .kptFilterPanel .kptFilterWithOptions
+{
+	display:inline-block;
+	margin-left:10px;
+	margin-bottom:50px;
+	background:#F5F5F5;
+	border:solid 1px #F5F5F5;
+	
+}
+
+.defaultKPT .kptFilterPanel .kptHighlight
+{
+	border:solid 1px #AAAAAA;
+}
+
+.defaultKPT .kptStatus .kptLoadingText
+{
+	display:none;
+}
+.defaultKPT .kptLoading .kptLoadingText
+{
+	display:inline;
+}
+.defaultKPT .kptLoading .kptDoneText
+{
+	display:none;
+}
+
+/* Scrolling */
+.defaultKPT .kptHorizontalScrolling .kptColumnHeaderZone .kptTable
+{
+	position:relative;
+}
+
+.defaultKPT .kptVerticalScrolling .kptContentZone .kptTable,
+.defaultKPT .kptHorizontalScrolling .kptContentZone .kptTable
+{
+	position:relative;
+}
+
+
+.defaultKPT .kptVerticalScrolling .kptRowHeaderZone .kptTable
+{
+	position:relative;
+}
+
+.defaultKPT .kptNoWrap
+{
+	white-space:nowrap;
+}
+
+.defaultKPT .kptFieldItem.text-right ,
+.defaultKPT .kptRowHeader.text-right ,
+.defaultKPT .kptColumnHeader.text-right, 
+.defaultKPT .kptDataCell.text-right ,
+.defaultKPT .kptFilterPanel.rtl 
+{
+	text-align: right;
+}
+
+.defaultKPT .kptFieldItem.rtl ,
+.defaultKPT .kptRowHeader.rtl ,
+.defaultKPT .kptColumnHeader.rtl, 
+.defaultKPT .kptDataCell.rtl ,
+.defaultKPT .kptFilterPanel.rtl 
+{
+	text-align: initial;
+	direction: rtl;
+}

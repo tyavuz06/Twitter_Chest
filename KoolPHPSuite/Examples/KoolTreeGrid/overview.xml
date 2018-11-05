@@ -1,0 +1,19 @@
+<control>
+	<name>KoolTreeGrid - Great PHP TreeGrid</name>
+	<metadescription>KoolTreeGrid is the excellent treegrid control for PHP, combining highly-efficient rendering and AJAX Load on Demand support for superior performance. VIEW DEMO NOW!</metadescription>
+	<metakeywords>php treegrid, php tree grid, php tree, php grid, ajax treeview, php ajax treegrid, treegrid drag and drop, php treegrid mysql, kooltreegrid</metakeywords>	 
+	<description>KoolTreeGrid is the excellent treegrid control for PHP, combining highly-efficient rendering and AJAX Load on Demand support for superior performance.</description>
+	<examples>
+		<example	name="Array Data" 
+					link="DataTypes/ArrayData/index.php" 
+					image="DataTypes/ArrayData/preview.gif"/>
+                
+		<example	name="Tree Array" 
+					link="DataTypes/TreeArray/index.php" 
+					image="DataTypes/TreeArray/preview.gif"/>
+                
+                <example	name="Styles" 
+					link="Appearance/Styles/index.php" 
+					image="Appearance/Styles/preview.gif"/>
+	</examples>			
+</control>

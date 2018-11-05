@@ -1,0 +1,371 @@
+.office2010blueKTG,
+.office2010blueKTG *
+{
+	margin:0px;
+	padding:0px;
+}
+
+.office2010blueKTG
+{
+	/*display:inline-block;*/
+	zoom:1;
+	*display:inline;
+}
+
+.office2010blueKTG *,
+.office2010blueKTG input,
+.office2010blueKTG select,
+.office2010blueKTG textarea
+{
+	font-family:arial,sans-serif;
+        /*font-size:11px;*/	
+}
+
+.office2010blueKTG #mytreeview\.root
+{
+    border:0px solid;
+}
+
+.office2010blueKTG table.ktg_table
+{
+    border:0px solid grey;
+    border-collapse:collapse;
+}
+.office2010blueKTG table.ktg_table th
+{
+    /*border:0px;*/
+}
+.office2010blueKTG table.ktg_table td
+{
+    border:0px solid grey;
+}
+
+.office2010blueKTG table.ktg_table,
+.office2010blueKTG table.ktg_table th,
+.office2010blueKTG table.ktg_table td
+{
+    padding-left: 5px;
+}
+
+.office2010blueKTG .td_ktv
+{
+    padding-left: 0px !important;
+}
+
+/*ktvText: Text in the node content*/
+.office2010blueKTG .office2010blueKTV .ktvText
+{
+    /*border:1px solid transparent;*/
+    /*	color:#000000;
+        font-family:tahoma,verdana,sans-serif;
+        font-size:11px;
+        font-size-adjust:none;
+        font-style:normal;
+        font-variant:normal;
+        font-weight:normal;
+        line-height:1.273em;
+        padding-left:2px;
+        padding-right:2px;	
+        line-height:20px;*/
+/*    color:#000000;
+    font-family:tahoma,verdana,sans-serif;
+    font-size:13px;*/
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    padding-left:2px;
+    padding-right:2px;
+    line-height:20px;
+    font-size-adjust:inherit;
+    font-size: 12px;
+    /*color: #03C;*/
+}
+
+.office2010blueKTG .ktvText
+{
+    /*border:1px solid transparent;*/
+/*    color:#000000;
+    font-family:tahoma,verdana,sans-serif;
+    font-size:13px;*/
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    padding-left:2px;
+    padding-right:2px;
+    line-height:20px;
+    font-size-adjust:inherit;
+    /*word-wrap:break-word*/
+}
+
+
+.office2010blueKTG .ktvTextInput
+{
+/*    color:#000000;
+    font-family:tahoma,verdana,sans-serif;
+    font-size:13px;*/
+
+    margin-left: 0px;
+    padding-left: 2px;
+}
+
+.office2010blueKTG .ktvTextSelect
+{
+/*    color:#000000;
+    font-family:tahoma,verdana,sans-serif;
+    font-size:13px;*/
+    margin-left: 0px;
+}
+
+.office2010blueKTG .ktvTextCheckbox
+{
+    margin-left: 2px;
+}
+
+.office2010blueKTG .ktg_header,
+.office2010blueKTG .ktg_header th
+{
+    background:url(sprite.png) repeat-x scroll 0 -2300px #BDCBDE;
+    border-color: #8BA0BC;
+    border-style: solid;
+    border-width: 0 0 1px 1px;
+    font-weight:normal;
+    text-align:left;
+    color: #384E73;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.office2010blueKTG .ktg_altRow
+{
+    /*background-color: #F1E9DC !important;*/
+    /*background-color: rgba(220,80,60,0.2)  !important;*/
+    background-color: rgba(189, 196, 240, 0.4)  !important;
+/*    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C8C8C8C, endColorstr=#4C8C8C8C)";*/
+    /*background: none repeat scroll 0 0 lightgrey !important;*/
+    /*background-image: url(AltRow.png) !important;*/
+}
+
+
+.office2010blueKTG
+{
+    /*white-space:nowrap;*/
+}
+.office2010blueKTG *
+{
+}
+/*ktvLI: TreeNode*/
+
+.office2010blueKTG .ktvLI
+{
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    line-height:16px;
+    /*font-size:11px;*/
+
+    border:0px solid grey;
+    border-right: 0px;
+    border-bottom: 0px;  
+    border-left: 0px;
+}
+
+/*ktvImage: Image in the node content*/
+.office2010blueKTG .ktvImage
+{
+    vertical-align:text-bottom;
+}
+
+
+/*ktvOver: Apply to treenode content when mouse is over*/
+.office2010blueKTG .ktvOver .ktvText
+{
+    cursor:default;
+}
+/*ktvOver: Apply to treenode content when mouse is selected*/
+.office2010blueKTG .ktvSelected .ktvText
+{
+    border:1px solid #6699cc;
+    background-color:#ccddee;
+}
+
+/*ktvPM: PlusMinus button in general*/
+.office2010blueKTG .ktvPM
+{
+    height:9px;
+    width:9px;
+    margin:3px 8px 0pt -16px;
+    cursor:pointer;
+    display:inline-block;
+    font-size:0pt;
+    padding:0pt;
+    vertical-align:top;
+    background:yellow;
+}
+
+html>body .office2010blueKTG .ktvPM
+{
+    display:-moz-inline-box;
+}
+
+
+/*ktvMinus: Minus button in detail*/
+.office2010blueKTG .ktvMinus
+{
+    background:url(pm.gif) no-repeat scroll 0pt -7pt;
+}
+
+/*ktvPlus: Plus button in detail*/
+.office2010blueKTG .ktvPlus
+{
+    background:url(pm.gif) no-repeat scroll 0pt 0pt;
+}
+
+/*ktvLoading: Ajax loading image*/
+.office2010blueKTG .ktvLoading
+{
+    width:16px;
+    height:16px;
+    background:url(loading.gif);
+    display:inline-block;
+    vertical-align:top;
+}
+html>body .office2010blueKTG .ktvLoading
+{
+    display:-moz-inline-box;
+}
+
+/*ktvEdit: Edit input when node is edited*/
+.office2010blueKTG .ktvEdit
+{
+    border:1px solid #6699cc;
+    background-color:#ccddee;
+    color:#000000;
+    font-family:tahoma,verdana,sans-serif;
+    font-size:11px;
+    font-size-adjust:none;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+}
+
+/*ktvEdit: Dump treenode when drag*/
+.office2010blueKTG .ktvDrag
+{
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    opacity:0.5;
+}
+
+/*ktvDrop: Apply to treenode content when a node is selected to drop*/
+.office2010blueKTG .ktvDrop .ktvText
+{
+    border:1px solid #6699cc;
+    background-color:#ccddee;
+    cursor:default;
+}
+
+
+/*ktvTop: Node on top*/
+/*ktvMid: Node in middle*/
+/*ktvBot: Node on bottom*/
+
+.office2010blueKTG .ktvMid, 
+.office2010blueKTG .ktvTop, 
+.office2010blueKTG .ktvBot
+{
+    padding-left:20px;
+}
+
+/*ktvUL: Node container*/
+.office2010blueKTG .ktvUL
+{
+    margin:0px;
+    padding-left:0px;
+}
+
+
+.office2010blueKTG .ktvUL .ktvUL,
+.office2010blueKTG .ktvUL .ktvUL .ktvUL
+{
+    margin:0px;
+    padding-left:0px;
+}
+
+
+/*ktvNoPadding: When showplusminus=false or rootnode visible = false*/
+.office2010blueKTG .ktvNoPadding .ktvUL
+{
+    margin:0px;
+    padding-left:0px;
+}
+
+.office2010blueKTG .ktvNoPadding .ktvUL .ktvUL
+{
+    margin:0px;
+    padding-left:20px;
+}
+
+/*ktvInv: Make root node invisible*/
+.office2010blueKTG .ktvInv
+{
+    display:none;
+}
+
+/*ktvNoPM: Make root node does not show PlusMinus button*/
+.office2010blueKTG .ktvNoPM
+{
+    padding-left:0px;
+    background:none;
+}
+.office2010blueKTG .ktvNoPM .ktvPM
+{
+    display:none;
+}
+
+
+
+/*ktvLines: Render tree with lines---------------------*/
+
+.office2010blueKTG .ktvLines .ktvLI
+{
+    background:url(v.gif) no-repeat scroll 0pt;	
+}
+
+.office2010blueKTG .ktvLines .ktvUL
+{
+    background:url(v.gif) no-repeat scroll 0pt;
+}
+
+.office2010blueKTG .ktvLines .ktvLast .ktvBot
+{
+    background:url(L.gif) no-repeat scroll 0pt;
+}
+
+
+.office2010blueKTG .ktvLines .ktvLast,
+.office2010blueKTG .ktvLines .ktvLast .ktvUL
+{
+    background:none;
+}
+
+.office2010blueKTG .ktvLines .ktvTop,
+.office2010blueKTG .ktvLines .ktvMid,
+.office2010blueKTG .ktvLines .ktvBot
+{
+    background:url(mid.gif) no-repeat scroll 0pt;
+}
+
+.office2010blueKTG .ktvLines .ktvLast .ktvTop
+{
+    background:url(horizon.gif) no-repeat scroll 0pt;
+}
+
+.office2010blueKTG .ktvLines .ktvLast .ktvNoPM
+{
+    background:none;
+}
+/*-------------------------*/
+
+
+
+

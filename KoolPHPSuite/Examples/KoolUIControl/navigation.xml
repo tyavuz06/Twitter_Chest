@@ -1,0 +1,18 @@
+<navigation id="KoolUIControl" title="PHP KoolUI Control Demo">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<category id="Barcode" text="Barcode">
+			
+                        <link 	id="CreateBarcode" 
+                                text="Create Barcode"
+                                link="Barcode/Barcode/index.php"
+                                new="true"/>
+                        
+                        <link 	id="BarcodeTypes" 
+                                text="Barcode Types"
+                                link="Barcode/BarcodeTypes/index.php" 
+                                new="true"/>
+					
+		</category>	
+	</category>
+</navigation>

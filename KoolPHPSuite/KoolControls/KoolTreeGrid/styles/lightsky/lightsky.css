@@ -1,0 +1,370 @@
+.lightskyKTG,
+.lightskyKTG *
+{
+    margin:0px;
+    padding:0px;
+}
+.lightskyKTG
+{
+	/*display:inline-block;*/
+	zoom:1;
+	*display:inline;
+}
+.lightskyKTG *,
+.lightskyKTG input,
+.lightskyKTG select,
+.lightskyKTG textarea
+{
+    font-family:tahoma,verdana,arial,sans-serif;
+    /*font-size:11px;*/	
+}
+
+.lightskyKTG #mytreeview\.root
+{
+    border:0px solid;
+}
+
+.lightskyKTG table.ktg_table
+{
+    border:0px solid grey;
+    border-collapse:collapse;
+}
+.lightskyKTG table.ktg_table th
+{
+    /*border:0px;*/
+}
+.lightskyKTG table.ktg_table td
+{
+    border:0px solid grey;
+}
+
+.lightskyKTG table.ktg_table,
+.lightskyKTG table.ktg_table th,
+.lightskyKTG table.ktg_table td
+{
+    padding-left: 5px;
+}
+
+.lightskyKTG .td_ktv
+{
+    padding-left: 0px !important;
+}
+
+/*ktvText: Text in the node content*/
+.lightskyKTG .lightskyKTV .ktvText
+{
+    /*border:1px solid transparent;*/
+    /*	color:#000000;
+        font-family:tahoma,verdana,sans-serif;
+        font-size:11px;
+        font-size-adjust:none;
+        font-style:normal;
+        font-variant:normal;
+        font-weight:normal;
+        line-height:1.273em;
+        padding-left:2px;
+        padding-right:2px;	
+        line-height:20px;*/
+/*    color:#000000;
+    font-family:tahoma,verdana,sans-serif;
+    font-size:13px;*/
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    padding-left:2px;
+    padding-right:2px;
+    line-height:20px;
+    font-size-adjust:inherit;
+    font-size: 12px;
+    /*color: #03C;*/
+}
+
+.lightskyKTG .ktvText
+{
+    /*border:1px solid transparent;*/
+/*    color:#000000;
+    font-family:tahoma,verdana,sans-serif;
+    font-size:13px;*/
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    padding-left:2px;
+    padding-right:2px;
+    line-height:20px;
+    font-size-adjust:inherit;
+    /*word-wrap:break-word*/
+}
+
+
+.lightskyKTG .ktvTextInput
+{
+/*    color:#000000;
+    font-family:tahoma,verdana,sans-serif;
+    font-size:13px;*/
+
+    margin-left: 0px;
+    padding-left: 2px;
+}
+
+.lightskyKTG .ktvTextSelect
+{
+/*    color:#000000;
+    font-family:tahoma,verdana,sans-serif;
+    font-size:13px;*/
+    margin-left: 0px;
+}
+
+.lightskyKTG .ktvTextCheckbox
+{
+    margin-left: 2px;
+}
+
+.lightskyKTG .ktg_header,
+.lightskyKTG .ktg_header th
+{
+    background-image:url(summary_bg.png);
+    background-repeat:repeat-x;
+    border-left:1px solid #cdfcac;
+    border-right:1px solid #cdfcac;
+    border-bottom:1px solid #cdfcac;
+    font-weight:bold;
+    padding: 2px;
+    /*padding-left: 10px;*/
+}
+
+.lightskyKTG .ktg_altRow
+{
+    /*background-color: #F1E9DC !important;*/
+    /*background-color: rgba(220,80,60,0.2)  !important;*/
+    background-color: rgba(180, 255, 255, 0.4)  !important;
+/*    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C8C8C8C, endColorstr=#4C8C8C8C)";*/
+    /*background: none repeat scroll 0 0 lightgrey !important;*/
+    /*background-image: url(AltRow.png) !important;*/
+}
+
+
+.lightskyKTG
+{
+    /*white-space:nowrap;*/
+}
+.lightskyKTG *
+{
+}
+/*ktvLI: TreeNode*/
+
+.lightskyKTG .ktvLI
+{
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    line-height:16px;
+    /*font-size:11px;*/
+
+    border:0px solid grey;
+    border-right: 0px;
+    border-bottom: 0px;  
+    border-left: 0px;
+}
+
+/*ktvImage: Image in the node content*/
+.lightskyKTG .ktvImage
+{
+    vertical-align:text-bottom;
+}
+
+
+
+
+/*ktvOver: Apply to treenode content when mouse is over*/
+.lightskyKTG .ktvOver .ktvText
+{
+    cursor:default;
+}
+/*ktvOver: Apply to treenode content when mouse is selected*/
+.lightskyKTG .ktvSelected .ktvText
+{
+    border:1px solid #6699cc;
+    background-color:#ccddee;
+}
+
+/*ktvPM: PlusMinus button in general*/
+.lightskyKTG .ktvPM
+{
+    height:9px;
+    width:9px;
+    margin:3px 8px 0pt -16px;
+    cursor:pointer;
+    display:inline-block;
+    font-size:0pt;
+    padding:0pt;
+    vertical-align:top;
+    background:yellow;
+}
+
+html>body .lightskyKTG .ktvPM
+{
+    display:-moz-inline-box;
+}
+
+
+/*ktvMinus: Minus button in detail*/
+.lightskyKTG .ktvMinus
+{
+    background:url(pm.gif) no-repeat scroll 0pt -7pt;
+}
+
+/*ktvPlus: Plus button in detail*/
+.lightskyKTG .ktvPlus
+{
+    background:url(pm.gif) no-repeat scroll 0pt 0pt;
+}
+
+/*ktvLoading: Ajax loading image*/
+.lightskyKTG .ktvLoading
+{
+    width:16px;
+    height:16px;
+    background:url(loading.gif);
+    display:inline-block;
+    vertical-align:top;
+}
+html>body .lightskyKTG .ktvLoading
+{
+    display:-moz-inline-box;
+}
+
+/*ktvEdit: Edit input when node is edited*/
+.lightskyKTG .ktvEdit
+{
+    border:1px solid #6699cc;
+    background-color:#ccddee;
+    color:#000000;
+    font-family:tahoma,verdana,sans-serif;
+    font-size:11px;
+    font-size-adjust:none;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+}
+
+/*ktvEdit: Dump treenode when drag*/
+.lightskyKTG .ktvDrag
+{
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    opacity:0.5;
+}
+
+/*ktvDrop: Apply to treenode content when a node is selected to drop*/
+.lightskyKTG .ktvDrop .ktvText
+{
+    border:1px solid #6699cc;
+    background-color:#ccddee;
+    cursor:default;
+}
+
+
+/*ktvTop: Node on top*/
+/*ktvMid: Node in middle*/
+/*ktvBot: Node on bottom*/
+
+.lightskyKTG .ktvMid, 
+.lightskyKTG .ktvTop, 
+.lightskyKTG .ktvBot
+{
+    padding-left:20px;
+}
+
+/*ktvUL: Node container*/
+.lightskyKTG .ktvUL
+{
+    margin:0px;
+    padding-left:0px;
+}
+
+
+.lightskyKTG .ktvUL .ktvUL,
+.lightskyKTG .ktvUL .ktvUL .ktvUL
+{
+    margin:0px;
+    padding-left:0px;
+}
+
+
+/*ktvNoPadding: When showplusminus=false or rootnode visible = false*/
+.lightskyKTG .ktvNoPadding .ktvUL
+{
+    margin:0px;
+    padding-left:0px;
+}
+
+.lightskyKTG .ktvNoPadding .ktvUL .ktvUL
+{
+    margin:0px;
+    padding-left:20px;
+}
+
+/*ktvInv: Make root node invisible*/
+.lightskyKTG .ktvInv
+{
+    display:none;
+}
+
+/*ktvNoPM: Make root node does not show PlusMinus button*/
+.lightskyKTG .ktvNoPM
+{
+    padding-left:0px;
+    background:none;
+}
+.lightskyKTG .ktvNoPM .ktvPM
+{
+    display:none;
+}
+
+
+
+/*ktvLines: Render tree with lines---------------------*/
+
+.lightskyKTG .ktvLines .ktvLI
+{
+    background:url(v.gif) no-repeat scroll 0pt;	
+}
+
+.lightskyKTG .ktvLines .ktvUL
+{
+    background:url(v.gif) no-repeat scroll 0pt;
+}
+
+.lightskyKTG .ktvLines .ktvLast .ktvBot
+{
+    background:url(L.gif) no-repeat scroll 0pt;
+}
+
+
+.lightskyKTG .ktvLines .ktvLast,
+.lightskyKTG .ktvLines .ktvLast .ktvUL
+{
+    background:none;
+}
+
+.lightskyKTG .ktvLines .ktvTop,
+.lightskyKTG .ktvLines .ktvMid,
+.lightskyKTG .ktvLines .ktvBot
+{
+    background:url(mid.gif) no-repeat scroll 0pt;
+}
+
+.lightskyKTG .ktvLines .ktvLast .ktvTop
+{
+    background:url(horizon.gif) no-repeat scroll 0pt;
+}
+
+.lightskyKTG .ktvLines .ktvLast .ktvNoPM
+{
+    background:none;
+}
+/*-------------------------*/
+
+
+
+

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Transformation" usedb="false">
+	<title>Chart's transformation</title>
+	<metakeywords>php charting, php chart, column chart, area chart, bar chart, line chart, scatter chart, scatter line chart</metakeywords>	 
+	<metadescription>KoolChart is excellent chart for PHP.</metadescription>
+	<description>
+		<![CDATA[ 
+
+<pre>
+<b>To set a chart's various options, please use the following properties:</b>
+
+$chart = new KoolChart("KoolChart1");
+$chart->set(array(
+    "Width" => 660,
+    "Height" => 600,
+    "Title" => array(
+       "Text" => "My chart's title",
+       "Appearance" => array(
+          "Position" => "Top",
+          "Translate" => [0, 0],
+          "SelfTranslate" => [0, 0],
+          "SelfWholeTranslate" => [0, 0],
+          "FullyVisible" => false,
+       ),
+    ),
+    "Legend" => array(
+       "Appearance" => array(
+          "Position" => "Top",
+          "BackgroundColor" => "white",
+          "Translate" => [0, 0],
+          "SelfTranslate" => [0, 0],
+          "SelfWholeTranslate" => [0, 0],
+          "FullyVisible" => false,
+       ),
+    ),
+    "PlotArea" => array(
+       "XAxis" => array(
+          "Title" => "X Axis",
+          "TitleAppearance" => array(
+             "Position" => "center",
+             "RotationAngle" => 0,
+             "Translate" => [0, 0],
+             "SelfTranslate" => [0, 0],
+             "SelfWholeTranslate" => [0, 0],
+             "FullyVisible" => false,
+          ),
+          "LabelsAppearance" => array(
+             "RotationAngle" => 0,
+             "Translate" => [0, 0],
+             "SelfTranslate" => [0, 0],
+             "SelfWholeTranslate" => [0, 0],
+             "FullyVisible" => false,
+          ),
+          "Items" => array(
+             array(
+                "Text" => "Category 0",
+             ),
+             array(
+                "Text" => "Category 1",
+             ),
+             array(
+                "Text" => "Category 2",
+             ),
+             array(
+                "Text" => "Category 3",
+             ),
+          ),
+       ),
+       "YAxis" => array(
+          "Title" => "Y Axis",
+             "TitleAppearance" => array(
+             "Position" => "center",
+             "RotationAngle" => 0,
+             "Translate" => [0, 0],
+             "SelfTranslate" => [0, 0],
+             "SelfWholeTranslate" => [0, 0],
+             "FullyVisible" => false,
+          ),
+          "LabelsAppearance" => array(
+             "DataFormatString" => "{0} M",
+             "RotationAngle" => 0,
+             "Translate" => [0, 0],
+             "SelfTranslate" => [0, 0],
+             "SelfWholeTranslate" => [0, 0],
+             "FullyVisible" => false,
+          ),	
+       ),
+    ),
+));
+
+or:
+
+$chart = new KoolChart('KoolChart1');
+$s = $chart->getSetting();
+$s["Width"] = 660;
+$s["Height"] = 600;
+
+$s["Title"]["Text"] = "My chart's title";
+$s["Title"]["Appearance"]["Position"] = "Top";
+$s["Title"]["Appearance"]["Translate"] = [0, 0];
+$s["Title"]["Appearance"]["SelfTranslate"] = [0, 0];
+$s["Title"]["Appearance"]["SelfWholeTranslate"] = [0, 0];
+$s["Title"]["Appearance"]["FullyVisible"] = false;
+
+$s["Legend"]["Appearance"]["Position"] = "Top";
+$s["Legend"]["Appearance"]["Translate"] = [0, 0];
+$s["Legend"]["Appearance"]["SelfTranslate"] = [0, 0];
+$s["Legend"]["Appearance"]["SelfWholeTranslate"] = [0, 0];
+$s["Legend"]["Appearance"]["FullyVisible"] = false;
+
+$s["PlotArea"]["XAxis"]["Title"] = "X Axis";
+$s["PlotArea"]["XAxis"]["TitleAppearance"]["Position"] = "center";
+$s["PlotArea"]["XAxis"]["TitleAppearance"]["RotationAngle"] = 0;
+$s["PlotArea"]["XAxis"]["TitleAppearance"]["Translate"] = [0, 0];
+$s["PlotArea"]["XAxis"]["TitleAppearance"]["SelfTranslate"] = [0, 0];
+$s["PlotArea"]["XAxis"]["TitleAppearance"]["SelfWholeTranslate"] = [0, 0];
+$s["PlotArea"]["XAxis"]["TitleAppearance"]["FullyVisible"] = false;
+
+$s["PlotArea"]["XAxis"]["LabelsAppearance"]["RotationAngle"] = 0;
+$s["PlotArea"]["XAxis"]["LabelsAppearance"]["Translate"] = [0, 0];
+$s["PlotArea"]["XAxis"]["LabelsAppearance"]["SelfTranslate"] = [0, 0];
+$s["PlotArea"]["XAxis"]["LabelsAppearance"]["SelfWholeTranslate"] = [0, 0];
+$s["PlotArea"]["XAxis"]["LabelsAppearance"]["FullyVisible"] = false;
+
+$s["PlotArea"]["XAxis"]["Items"][0]["Text"] = "Category 0";
+$s["PlotArea"]["XAxis"]["Items"][1]["Text"] = "Category 1";
+$s["PlotArea"]["XAxis"]["Items"][2]["Text"] = "Category 2";
+$s["PlotArea"]["XAxis"]["Items"][3]["Text"] = "Category 3";
+
+$s["PlotArea"]["YAxis"]["Title"] = "Y Axis";
+$s["PlotArea"]["YAxis"]["TitleAppearance"]["Position"] = "Center";
+$s["PlotArea"]["YAxis"]["TitleAppearance"]["RotationAngle"] = 0;
+$s["PlotArea"]["YAxis"]["TitleAppearance"]["Translate"] = [0, 0];
+$s["PlotArea"]["YAxis"]["TitleAppearance"]["SelfTranslate"] = [0, 0];
+$s["PlotArea"]["YAxis"]["TitleAppearance"]["SelfWholeTranslate"] = [0, 0];
+$s["PlotArea"]["YAxis"]["TitleAppearance"]["FullyVisible"] = false;
+
+$s["PlotArea"]["YAxis"]["LabelsAppearance"]["DataFormatString"] = "{0} M";
+$s["PlotArea"]["YAxis"]["LabelsAppearance"]["RotationAngle"] = 0;
+$s["PlotArea"]["YAxis"]["LabelsAppearance"]["Translate"] = [0, 0];
+$s["PlotArea"]["YAxis"]["LabelsAppearance"]["SelfTranslate"] = [0, 0];
+$s["PlotArea"]["YAxis"]["LabelsAppearance"]["SelfWholeTranslate"] = [0, 0];
+$s["PlotArea"]["YAxis"]["LabelsAppearance"]["FullyVisible"] = false;
+
+$chart->set($s);
+
+</pre>
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+    $KoolControlsFolder = "../../../../KoolControls";//Relative path to "KoolPHPSuite/KoolControls" folder
+    require $KoolControlsFolder . "/KoolChart/koolchart.php";
+    require $KoolControlsFolder."/KoolAjax/koolajax.php";
+    require $KoolControlsFolder."/KoolTreeGrid/kooltreegrid.php";
+        
+    $chart = new KoolChart("KoolChart1");
+    $chart->scriptFolder=$KoolControlsFolder."/KoolChart";	
+    $chart->Title->Text = "Sales report for 2012";
+    $chart->Width = 660;
+    $chart->Height = 600;
+    $chart->PlotArea->XAxis->Title = "Quarters (long string 1 long string 2)";
+    $chart->PlotArea->XAxis->Set(array("Q1 (long string 1 long string 2 long string 3)","Q2","Q3","Q4  (long string 1 long string 2)"));
+    $chart->PlotArea->YAxis->Title = "Sales (long string 1 long string 2)";
+    $chart->PlotArea->YAxis->LabelsAppearance->DataFormatString = "$ {0}";
+
+    $series = new ColumnSeries();
+    $series->Name = "TVs";
+    $series->TooltipsAppearance->DataFormatString = "$ {0} millions {1}";
+    $series->ArrayData(array(20,30,40,70));
+    $chart->PlotArea->AddSeries($series);
+
+    $series = new ColumnSeries();
+    $series->Name = "Computers ";
+    $series->TooltipsAppearance->DataFormatString = "$ {0} millions {1}";
+    $series->ArrayData(array(34,55,10,40));
+    $chart->PlotArea->AddSeries($series);
+
+    $series = new ColumnSeries();
+    $series->Name = "Tablets & e-readers";
+    $series->TooltipsAppearance->DataFormatString = "$ {0} millions {1}";
+    $series->ArrayData(array(56,23,56,80));
+    $chart->PlotArea->AddSeries($series);
+    
+    $chart->set(array(
+        "BarGapRatio" => 0,
+        "CategoryGapRatio" => null,
+        'Title' => array(
+            'Appearance' => array(
+                'Position' => 'toP',
+            )
+        ),
+        'Legend' => array(
+            'Appearance' => array(
+                'SelfWholeTranslate' => [0/2, 0],
+            ),
+        ),
+        'PlotArea' => array(
+            'XAxis' => array(
+                'LabelsAppearance' => array(
+                    'SelfTranslate' => [1/2, 0],
+                    'RotationAngle' => 15,
+                    'FullyVisible' => TRUE,
+                ),
+            ),
+            'YAxis' => array(
+                'TitleAppearance' => array(
+                    'Position' => 'center',
+                    'SelfTranslate' => [0, -3/4],
+                ),
+                'LabelsAppearance' => array(
+                    'DataFormatString' => '{0} M (long string 1 long string 2)',
+                ),
+            ) 
+        ),
+        'Transitions' => FALSE,
+    ));
+    
+    $info = array(
+        'id' => 'KoolTreeGrid1',
+        'style' => 'outlook',
+        'width' => '400px',
+        'columns' => array(
+            array(
+                'field' => 'prop',
+                'headerText' => 'Property',
+                'width' => '200px',
+            ),
+            array(
+                'field' => 'value',
+                'headerText' => 'Value',
+                'width' => '120px',
+            ),
+            array(
+                'field' => 'type',
+                'headerText' => 'Type',
+                'width' => '50px',
+            ),
+            array(
+                'field' => 'desc',
+                'headerText' => 'Description',
+                'visible' => false,
+            ),
+        ),
+    );
+    
+    $treeGrid = KoolTreeGrid::newTreeGrid($info);
+    $metaField = 'meta';
+    $rows = KoolTreeGrid::csvToArray('data.csv', ';');
+    foreach ($rows as & $row) 
+        foreach ($row as $field => & $value)
+            if ($field===$metaField) 
+                $value = json_decode($value, true);
+    
+    $treeGrid->set(array(
+        'ArrayData' => $rows,
+        'idField' => 'id',
+        'parentField' => 'parentId',
+        'metaField' => $metaField,
+    ));
+    $treeGrid->process();
+
+?>
+<form id="form1" method="post">
+    <?php 
+            //Render Ajax functions for KoolTreeView
+            echo $koolajax->Render();
+    ?>
+    
+    <div id="KoolChart1Div" style="float:left">
+        <?php echo $chart->Render();?>
+    </div>
+    
+    <div id="KoolTreeGrid1Div" style="float:left;margin: 25px">
+        <?php 
+            echo $treeGrid->render();
+        ?>
+        <input type="button" value="Update KoolChart" onclick="KoolTreeGrid_update('KoolTreeGrid1', 'KoolChart1')"></input>
+        <input type="button" value="Reset" onclick="KoolTreeGrid_reset('KoolTreeGrid1', 'KoolChart1')"></input>
+    </div>
+
+    <script type='text/javascript'>
+        
+        KoolTreeGrid_update = function(ktgId, kcId) {
+            var ktg = KoolTreeGridJS.getTreeGrid(ktgId);
+            var treeData = ktg.getCurrentTreeData();
+            var chart = KoolChartJS.getChart(kcId);
+            var newSetting = ktg.treeDataToSetting(treeData, 'prop', 'value', 'type');
+            var chartSetting = chart.getSetting();
+            var setting = KoolPHP.recursiveMerge(chartSetting, newSetting);
+            chart.setSetting(setting);
+            chart.redraw();
+        };
+        
+        KoolTreeGrid_reset = function(ktgId, kcId) {
+            var ktg = KoolTreeGridJS.getTreeGrid(ktgId);
+            var treeData = ktg.getOriginalTreeData();
+            var chart = KoolChartJS.getChart(kcId);
+            var newSetting = ktg.treeDataToSetting(treeData, 'prop', 'value', 'type');
+            var setting = KoolPHP.recursiveMerge(chart.getSetting(), newSetting);
+            chart.setSetting(setting);
+            chart.redraw();
+            ktg.reRender();
+        };
+        
+    </script>
+    
+    <div style="clear:both"><i>* <u>Note</u>:</i>Generate your own chart with <a style="color:#B8305E;" target="_blank" href="http://codegen.koolphp.net/generate_koolchart.php">Code Generator</a></div>
+	
+</form>
+
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+            <doc link="http://doc.koolphp.net/Controls/KoolChart/PHP/KoolChart_Properties/index.php">Chart's properties</doc>
+	</docs>
+</example>

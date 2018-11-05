@@ -1,0 +1,15 @@
+<control>
+	<name>KoolUIControl - Excellent PHP, HTML5 and Javascript Controls</name>
+	<metadescription></metadescription>
+	<metakeywords>php control, php html5 javascript, html5 control, javascript library</metakeywords>	 
+	<description></description>
+	<examples>
+		<example	name="Create Barcode" 
+					link="Barcode/Barcode/index.php" 
+					image="Barcode/Barcode/preview.gif"/>
+                <example	name="Barcode Types" 
+					link="Barcode/BarcodeTypes/index.php" 
+					image="Barcode/BarcodeTypes/preview.gif"/>
+                
+	</examples>			
+</control>

@@ -1,0 +1,23 @@
+<navigation id="KoolTreeGrid" title="PHP TreeGrid Demo">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<category id="DataTypes" text="Data Types">
+			<link 	id="ArrayData" 
+                                text="Array Data"
+                                link="DataTypes/ArrayData/index.php" 
+                                new="true"/>
+					
+			<link 	id="TreeArray" 
+                                text="Tree Array"
+                                link="DataTypes/TreeArray/index.php" 
+                                new="true"/>
+		</category>	
+                <category id="Appearance" text="Appearance">
+			<link 	id="Styles" 
+                                text="Styles"
+                                link="Appearance/Styles/index.php" 
+                                new="true"/>
+		</category>
+		
+	</category>
+</navigation>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="ArrayData" usedb="false">
+	<title>KoolTreeGrid using array data</title>
+	<metakeywords>php treegrid, php tree grid, php tree, php grid, ajax treeview, php ajax treegrid, treegrid drag and drop, php treegrid mysql, kooltreegrid</metakeywords> 
+	<metadescription>KoolTreeGrid is the excellent treegrid control for PHP, combining highly-efficient rendering and AJAX Load on Demand support for superior performance. VIEW DEMO NOW!</metadescription>
+	<description>
+		<![CDATA[ 
+              
+To use an table array as data for KoolTreeGrid, you must provide an id field and parent field for each row which is used to construct the tree relation between rows.<br>
+A meta field is optional that will provide options like row expanding or not, displaying type for each cell, etc.<br>
+ For example: <br> 
+<pre>  
+    $arr = array(
+        array('id' => '1', 'parent' => '' , 'type' => 'Captain', 'level' => '1'),
+        array('id' => '2', 'parent' => '1', 'type' => 'Crew member', 'level' => '2'),
+        array('id' => '3', 'parent' => '2', 'type' => 'Apprentice', 'level' => '3'),
+    );
+    $treeGrid = KoolTreeGrid::newTreeGrid(array(
+        'ArrayData' => $arr,
+        'idField' => 'id',
+        'parentField' => 'parent',
+        'columns' => array(
+            array(
+                'field' => 'type',
+            ),
+            array(
+                'field' => 'level',
+            ),
+        ),
+    ));
+</pre>
+		]]>		
+	</description>
+        
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+
+    //Relative path to "KoolPHPSuite/KoolControls" folder
+    $KoolControlsFolder = "../../../../KoolControls";
+    require $KoolControlsFolder."/KoolAjax/koolajax.php";
+    require $KoolControlsFolder."/KoolTreeGrid/kooltreegrid.php";
+
+    $info = array(
+        'id' => 'KoolTreeGrid1',
+        'width' => '780px',
+        'columns' => array(
+            array(
+                'field' => 'prop',
+                'headerText' => 'Property',
+                'width' => '250px',
+            ),
+            array(
+                'field' => 'defaultValue',
+                'headerText' => 'Default Value',
+                'width' => '120px',
+            ),
+            array(
+                'field' => 'value',
+                'headerText' => 'Example Value',
+                'width' => '120px',
+                'columnEdit' => TRUE,
+            ),
+            array(
+                'field' => 'type',
+                'headerText' => 'Type',
+                'width' => '50px',
+            ),
+            array(
+                'field' => 'desc',
+                'headerText' => 'Description',
+            ),
+        ),
+        'rootIndent' => 20,
+        'treeIndent' => 19,
+    );
+    
+    $treeGrid = KoolTreeGrid::newTreeGrid($info);
+    
+    $rows = KoolTreeGrid::csvToArray('data.csv', ';');
+    $metaField = 'meta';
+    $rows = KoolTreeGrid::csvToArray('data.csv', ';');
+    foreach ($rows as & $row) 
+        foreach ($row as $field => & $value)
+            if ($field===$metaField) 
+                $value = json_decode($value, true);
+    
+    $treeGrid->addSetting(array(
+        'ArrayData' => $rows,
+        'idField' => 'id',
+        'parentField' => 'parentId',
+        'metaField' => $metaField,
+    ));
+    
+    $treeGrid->process();
+?>
+
+<form id="form1" method="post">
+    <?php 
+        //Render Ajax functions for KoolTreeView
+        echo $koolajax->Render();
+    ?>
+    <?php 
+        echo $treeGrid->render();
+    ?>
+</form> 
+
+
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolTreeGrid/PHP/KoolTreeGrid_Properties/index.php">KoolTreeGrid Properties</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolTreeGrid/PHP/KoolTreeGrid_Methods/index.php">KoolTreeGrid Methods</doc>
+	</docs>
+</example>

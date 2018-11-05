@@ -1,0 +1,47 @@
+<control>
+	<name>KoolPivotTable - Powerful PHP Pivot Table</name>
+	<metadescription>PHP Pivot Table - Excel-like data analysis and summarization tool.</metadescription>
+	<metakeywords>php pivot table, php pivot grid, pivot table, pivot grid, php data analysis, business intelligent tool, excel-like data summarization</metakeywords>	 
+	<description>
+		KoolPivotTable is the Excel-like pivot table. Given data set, the tool will give you the summarization of your data and present it in coherent table.
+		The power of this pivot table is to allow users to alternate data dimension and to filter data as they want.
+	</description>
+	<examples>
+		<example	name="First Look" 
+					link="Firstlook/Firstlook/index.php" 
+					image="Firstlook/Firstlook/preview.gif"/>
+        
+        <example	name="Right to left" 
+					link="Display/Right_to_left/index.php" 
+					image="Display/Right_to_left/preview.gif"/>
+					
+		<example	name="Reorder" 
+					link="Features/Reorder/index.php" 
+					image="Features/Reorder/preview.gif"/>
+		
+		<example	name="Scrolling" 
+					link="Features/Scrolling/index.php" 
+					image="Features/Scrolling/preview.gif"/>
+					
+		<example	name="Sorting" 
+					link="Features/Sorting/index.php" 
+					image="Features/Sorting/preview.gif"/>
+
+		<example	name="Sorting Data" 
+					link="Features/SortingData/index.php" 
+					image="Features/SortingData/preview.gif"/>
+
+		<example	name="Exporting" 
+					link="Features/Export/index.php" 
+					image="Features/Export/preview.gif"/>
+		
+		<example	name="Localization" 
+					link="Features/Localization/index.php" 
+					image="Features/Localization/preview.gif"/>
+		
+		<example	name="Value Mapping" 
+					link="Advanced/Value_Mapping/index.php" 
+					image="Advanced/Value_Mapping/preview.gif"/>                
+
+	</examples>			
+</control>
